@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embedded content</title>
 </head>
+
 <body>
-    
+    <h1>Embedded Content</h1>
+    <p>This page demonstrates how to embed content using HTML.</p>
+    <pre>
+        The following elements are used to embed various types of content:
+        &lt;img&gt;,
+         &lt;audio&gt;, 
+         &lt;video&gt;,
+          &lt;canvas&gt;,
+           &lt;iframe&gt;, 
+           &lt;embed&gt;,
+           &lt;object&gt;,
+           &lt;param&gt;
+    </pre>
+    <pre>
+
+        <img src="image.jpg" alt="An example image">
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+        <iframe src="https://www.example.com" width="300" height="200"></iframe>
+        <embed src="document.pdf" type="application/pdf" width="300" height="200">
+        <object data="data.xml" type="application/xml" width="300" height="200">
+            <param name="param1" value="value1">
+            <param name="param2" value="value2">
+            Your browser does not support this object.
+        </object>
+    </pre>
 </body>
-</html
+
+</html>

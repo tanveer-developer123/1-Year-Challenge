@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template content</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template and Slot Content</title>
 </head>
+
 <body>
-    
+
+    <h1>Template and Slot Demo</h1>
+    <p>This section demonstrates how <code>&lt;template&gt;</code> and <code>&lt;slot&gt;</code> work in HTML.</p>
+
+    <template id="my-template">
+        <div class="template-box">
+            <h2>This is rendered from a template</h2>
+            <p>
+                <slot>This is slot content inside the template.</slot>
+            </p>
+        </div>
+    </template>
+
+    <div id="output"></div>
+
+    <script>
+        const template = document.getElementById("my-template");
+        const clone = template.content.cloneNode(true);
+        document.getElementById("output").appendChild(clone);
+    </script>
+
+    <h2>Code Example (Displayed)</h2>
+    <pre><code>
+&lt;template id="my-template"&gt;
+  &lt;div class="template-box"&gt;
+    &lt;h2&gt; This is rendered from a template&lt;/h2&gt;
+    &lt;p&gt;&lt;slot&gt;This is slot content inside the template.&lt;/slot&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  const template = document.getElementById("my-template");
+  const clone = template.content.cloneNode(true);
+  document.getElementById("output").appendChild(clone);
+&lt;/script&gt;
+  </code></pre>
+
 </body>
+
 </html>

@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metadata Content</title>
 </head>
+
 <body>
-    
+    <!-- Topic of <head> And <meta> -->
+
+    <h1>Metadata Content / &lt;head&gt; / &lt;meta&gt;</h1>
+    <p>This Metadata is used to in html in head section body of out and html tag in innner and is used to a
+        <strong>provide information about the document</strong>.
+        Is Tag is used to define the character set for the HTML document, which is essential for proper text rendering.
+    </p>
+    <p>Metadata is not displayed on the page but is machine-readable and can be used by browsers, search engines, and
+        other services.</p>
+    <p>Metadata can include information such as the document's title, description, keywords, author, and more.</p>
+    <p>It is important for SEO (Search Engine Optimization) as it helps search engines understand the content of the
+        page.</p>
+    <p>Metadata can also include links to stylesheets, scripts, and other resources that are required for the proper
+        rendering and functionality of the page.</p>
+
+    <h2>Example of Metadata in HTML</h2>
+    <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Document Title&lt;/title&gt;
+&lt;meta name="description" content="This is a sample HTML document with metadata."&gt;
+&lt;meta name="keywords" content="HTML, metadata, example"&gt;
+&lt;meta name="author" content="Your Name"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </pre>
+
+    <!-- Topic of Title  -->
+    <h1>Topic of &lt;title&gt;</h1>
+    <p>
+        The &lt;title&gt; tag is used to define the title of the HTML document. This title is displayed in the browser's
+        title bar or tab and is also used by search engines as the main title for the page in search results.</p>
+    <p>It is important for SEO and user experience, as it gives users an idea of what the page is about before they
+        click on it.</p>
+    <p>The title should be concise, descriptive, and relevant to the content of the page
+    </p>
+
+    <!-- Topic of <link> -->
+    <h1>Topic of &lt;link&gt;</h1>
+    <p>
+        The &lt;link&gt; tag is used to link external resources to the HTML document, such as stylesheets, icons, and
+        other files. It is typically placed within the &lt;head&gt; section of the document.</p>
+    <p>Here is an example of how to use the &lt;link&gt; tag to include a stylesheet:</p>
+    <pre>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+        </pre>
+    <p>In this example, the &lt;link&gt; tag is used to link to an external CSS file named "styles.css". The "rel"
+        attribute specifies the relationship between the current document and the linked resource, which in this case is
+        "stylesheet".
+    <p>
+        The &lt;link&gt; tag can also be used to link to other types of resources, such as icons or alternate
+        stylesheets.
+        For example, to link to a favicon (the small icon displayed in the browser tab), you can use the following code:
+    </p>
+    <pre>
+&lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;
+    </pre>
+
+    <h1>Topic of &lt;style&gt;</h1>
+    <p>
+        The &lt;style&gt; tag is used to define internal CSS styles for the HTML document. It is typically placed within
+        the &lt;head&gt; section and allows you to apply styles directly to the elements of the page.
+    </p>
+    <p>Here is an example of how to use the &lt;style&gt; tag:</p>
+    <pre>
+&lt;style&gt;
+    body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+    h1 {
+        color: #333;
+    }
+    &lt;/style&gt;
+</pre>
+    <h1>Topic of &lt;script&gt;</h1>
+    <p>
+        The &lt;script&gt; tag is used to include JavaScript code in the HTML document. It can be placed either in the
+        &lt;head&gt; section or at the end of the &lt;body&gt; section, depending on when you want the script to be
+        executed.
+    <pre>
+&lt;script&gt;
+    console.log("Hello, World!");
+&lt;/script&gt;
+        </pre>
+    <p>
+        This is where you can write your JavaScript code. It will be executed when the page loads.
+    </p>
 </body>
+
 </html>
