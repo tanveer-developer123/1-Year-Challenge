@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tricks Complete Guide</title>
+    <link rel="stylesheet" href="Tricks.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1 class="main-title">CSS Tricks Mastery</h1>
+            <p class="subtitle">Master essential CSS techniques for modern web development</p>
+        </header>
+
+        <!-- 1. Centering Techniques Section -->
+        <section class="concept-section">
+            <h2>1. Centering Techniques (Flexbox, Grid, Positioning)</h2>
+            <div class="centering-demo">
+                <div class="centering-group">
+                    <h4>Flexbox Centering</h4>
+                    <div class="centering-examples">
+                        <div class="centering-example">
+                            <h5>Horizontal & Vertical</h5>
+                            <div class="demo-box flex-center">
+                                <div class="centered-item">Centered with Flexbox</div>
+                            </div>
+                        </div>
+                        <div class="centering-example">
+                            <h5>Horizontal Only</h5>
+                            <div class="demo-box flex-horizontal">
+                                <div class="centered-item">Horizontal Centered</div>
+                            </div>
+                        </div>
+                        <div class="centering-example">
+                            <h5>Vertical Only</h5>
+                            <div class="demo-box flex-vertical">
+                                <div class="centered-item">Vertical Centered</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+/* Flexbox Centering */<br>
+.flex-center {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;align-items: center;<br>
+&nbsp;&nbsp;justify-content: center;<br>
+}<br><br>
+.flex-horizontal {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;justify-content: center;<br>
+}<br><br>
+.flex-vertical {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;align-items: center;<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="centering-group">
+                    <h4>Grid Centering</h4>
+                    <div class="centering-examples">
+                        <div class="centering-example">
+                            <h5>Grid Place Items</h5>
+                            <div class="demo-box grid-center">
+                                <div class="centered-item">Centered with Grid</div>
+                            </div>
+                        </div>
+                        <div class="centering-example">
+                            <h5>Grid Self Center</h5>
+                            <div class="demo-box grid-self">
+                                <div class="centered-item self-center">Self Centered</div>
+                            </div>
+                        </div>
+                        <div class="centering-example">
+                            <h5>Grid Template Areas</h5>
+                            <div class="demo-box grid-areas">
+                                <div class="centered-item">Grid Areas</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+/* Grid Centering */<br>
+.grid-center {<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;place-items: center;<br>
+}<br><br>
+.self-center {<br>
+&nbsp;&nbsp;justify-self: center;<br>
+&nbsp;&nbsp;align-self: center;<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="centering-group">
+                    <h4>Positioning Centering</h4>
+                    <div class="centering-examples">
+                        <div class="centering-example">
+                            <h5>Absolute + Transform</h5>
+                            <div class="demo-box absolute-center">
+                                <div class="centered-item">Absolute Centered</div>
+                            </div>
+                        </div>
+                        <div class="centering-example">
+                            <h5>Absolute + Margin</h5>
+                            <div class="demo-box margin-center">
+                                <div class="centered-item">Margin Centered</div>
+                            </div>
+                        </div>
+                        <div class="centering-example">
+                            <h5>Table Cell Method</h5>
+                            <div class="demo-box table-center">
+                                <div class="centered-item">Table Centered</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+/* Positioning Centering */<br>
+.absolute-center {<br>
+&nbsp;&nbsp;position: relative;<br>
+}<br>
+.centered-item {<br>
+&nbsp;&nbsp;position: absolute;<br>
+&nbsp;&nbsp;top: 50%;<br>
+&nbsp;&nbsp;left: 50%;<br>
+&nbsp;&nbsp;transform: translate(-50%, -50%);<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Custom Buttons, Modals, and Cards Section -->
+        <section class="concept-section">
+            <h2>2. Custom Buttons, Modals, and Cards</h2>
+            <div class="components-demo">
+                <div class="components-group">
+                    <h4>Custom Buttons</h4>
+                    <div class="button-examples">
+                        <div class="button-example">
+                            <h5>Gradient Button</h5>
+                            <button class="custom-button gradient-btn">Gradient Button</button>
+                        </div>
+                        <div class="button-example">
+                            <h5>Neumorphism Button</h5>
+                            <button class="custom-button neumorphism-btn">Neumorphism</button>
+                        </div>
+                        <div class="button-example">
+                            <h5>Glass Button</h5>
+                            <button class="custom-button glass-btn">Glass Effect</button>
+                        </div>
+                        <div class="button-example">
+                            <h5>Animated Button</h5>
+                            <button class="custom-button animated-btn">Animated</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="components-group">
+                    <h4>Modal Components</h4>
+                    <div class="modal-examples">
+                        <div class="modal-example">
+                            <h5>Basic Modal</h5>
+                            <button class="modal-trigger" onclick="openModal('basic-modal')">Open Modal</button>
+                            <div id="basic-modal" class="modal">
+                                <div class="modal-content">
+                                    <h3>Basic Modal</h3>
+                                    <p>This is a simple modal with backdrop blur.</p>
+                                    <button class="modal-close" onclick="closeModal('basic-modal')">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-example">
+                            <h5>Slide Modal</h5>
+                            <button class="modal-trigger" onclick="openModal('slide-modal')">Slide Modal</button>
+                            <div id="slide-modal" class="modal slide-modal">
+                                <div class="modal-content slide-content">
+                                    <h3>Slide Modal</h3>
+                                    <p>This modal slides in from the right.</p>
+                                    <button class="modal-close" onclick="closeModal('slide-modal')">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="components-group">
+                    <h4>Card Components</h4>
+                    <div class="card-examples">
+                        <div class="card-example">
+                            <h5>Basic Card</h5>
+                            <div class="custom-card basic-card">
+                                <div class="card-image">📷</div>
+                                <div class="card-content">
+                                    <h3>Card Title</h3>
+                                    <p>This is a basic card with hover effects.</p>
+                                    <button class="card-btn">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-example">
+                            <h5>Glass Card</h5>
+                            <div class="custom-card glass-card">
+                                <div class="card-image">✨</div>
+                                <div class="card-content">
+                                    <h3>Glass Card</h3>
+                                    <p>This card has a glass morphism effect.</p>
+                                    <button class="card-btn">Explore</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-example">
+                            <h5>Flip Card</h5>
+                            <div class="custom-card flip-card">
+                                <div class="card-front">
+                                    <h3>Front Side</h3>
+                                    <p>Hover to flip</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>Back Side</h3>
+                                    <p>Flipped!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Sticky Headers and Scroll Effects Section -->
+        <section class="concept-section">
+            <h2>3. Sticky Headers and Scroll Effects</h2>
+            <div class="scroll-demo">
+                <div class="scroll-group">
+                    <h4>Sticky Header</h4>
+                    <div class="sticky-header-demo">
+                        <header class="sticky-header">
+                            <div class="header-content">
+                                <div class="logo">Logo</div>
+                                <nav class="nav-menu">
+                                    <a href="#" class="nav-link">Home</a>
+                                    <a href="#" class="nav-link">About</a>
+                                    <a href="#" class="nav-link">Services</a>
+                                    <a href="#" class="nav-link">Contact</a>
+                                </nav>
+                            </div>
+                        </header>
+                        <div class="scroll-content">
+                            <div class="content-section">Section 1 - Scroll down to see sticky effect</div>
+                            <div class="content-section">Section 2 - Header will stick to top</div>
+                            <div class="content-section">Section 3 - Smooth transitions</div>
+                            <div class="content-section">Section 4 - Responsive design</div>
+                            <div class="content-section">Section 5 - Modern CSS techniques</div>
+                            <div class="content-section">Section 6 - Performance optimized</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-group">
+                    <h4>Scroll-Based Effects</h4>
+                    <div class="scroll-effects">
+                        <div class="scroll-effect">
+                            <h5>Parallax Effect</h5>
+                            <div class="parallax-container">
+                                <div class="parallax-bg">Background</div>
+                                <div class="parallax-content">Foreground Content</div>
+                            </div>
+                        </div>
+                        <div class="scroll-effect">
+                            <h5>Fade In on Scroll</h5>
+                            <div class="fade-in-container">
+                                <div class="fade-item">Fade Item 1</div>
+                                <div class="fade-item">Fade Item 2</div>
+                                <div class="fade-item">Fade Item 3</div>
+                            </div>
+                        </div>
+                        <div class="scroll-effect">
+                            <h5>Scale on Scroll</h5>
+                            <div class="scale-container">
+                                <div class="scale-item">Scale Element</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Hiding/Showing Elements Responsively Section -->
+        <section class="concept-section">
+            <h2>4. Hiding/Showing Elements Responsively</h2>
+            <div class="responsive-demo">
+                <div class="responsive-group">
+                    <h4>Display Classes</h4>
+                    <div class="display-examples">
+                        <div class="display-example">
+                            <h5>Hidden on Mobile</h5>
+                            <div class="element hidden-mobile">Hidden on Mobile</div>
+                        </div>
+                        <div class="display-example">
+                            <h5>Hidden on Desktop</h5>
+                            <div class="element hidden-desktop">Hidden on Desktop</div>
+                        </div>
+                        <div class="display-example">
+                            <h5>Visible on Tablet Only</h5>
+                            <div class="element tablet-only">Tablet Only</div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+/* Responsive Display */<br>
+.hidden-mobile {<br>
+&nbsp;&nbsp;display: none;<br>
+}<br>
+@media (min-width: 768px) {<br>
+&nbsp;&nbsp;.hidden-mobile {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;display: block;<br>
+&nbsp;&nbsp;}<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="responsive-group">
+                    <h4>Visibility Techniques</h4>
+                    <div class="visibility-examples">
+                        <div class="visibility-example">
+                            <h5>Opacity Transition</h5>
+                            <div class="element opacity-toggle">Opacity Toggle</div>
+                            <button class="toggle-btn" onclick="toggleOpacity()">Toggle</button>
+                        </div>
+                        <div class="visibility-example">
+                            <h5>Transform Hide</h5>
+                            <div class="element transform-hide">Transform Hide</div>
+                            <button class="toggle-btn" onclick="toggleTransform()">Toggle</button>
+                        </div>
+                        <div class="visibility-example">
+                            <h5>Clip Path Hide</h5>
+                            <div class="element clip-hide">Clip Path Hide</div>
+                            <button class="toggle-btn" onclick="toggleClip()">Toggle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="responsive-group">
+                    <h4>Conditional Rendering</h4>
+                    <div class="conditional-examples">
+                        <div class="conditional-example">
+                            <h5>Screen Size Based</h5>
+                            <div class="screen-based">
+                                <div class="mobile-content">📱 Mobile Content</div>
+                                <div class="tablet-content">📱 Tablet Content</div>
+                                <div class="desktop-content">💻 Desktop Content</div>
+                            </div>
+                        </div>
+                        <div class="conditional-example">
+                            <h5>Feature Detection</h5>
+                            <div class="feature-based">
+                                <div class="hover-content">Hover Available</div>
+                                <div class="touch-content">Touch Device</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Advanced CSS Tricks -->
+        <section class="concept-section">
+            <h2>5. Advanced CSS Tricks</h2>
+            <div class="advanced-demo">
+                <div class="advanced-group">
+                    <h4>CSS Shapes</h4>
+                    <div class="shape-examples">
+                        <div class="shape-example">
+                            <h5>Triangle</h5>
+                            <div class="triangle"></div>
+                        </div>
+                        <div class="shape-example">
+                            <h5>Circle</h5>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="shape-example">
+                            <h5>Diamond</h5>
+                            <div class="diamond"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advanced-group">
+                    <h4>CSS Effects</h4>
+                    <div class="effect-examples">
+                        <div class="effect-example">
+                            <h5>Text Gradient</h5>
+                            <div class="gradient-text">Gradient Text Effect</div>
+                        </div>
+                        <div class="effect-example">
+                            <h5>Glow Effect</h5>
+                            <div class="glow-effect">Glow Effect</div>
+                        </div>
+                        <div class="effect-example">
+                            <h5>Neon Effect</h5>
+                            <div class="neon-effect">Neon Effect</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>🎯 You've mastered CSS Tricks fundamentals!</p>
+            <p>Use these techniques to create modern, interactive web experiences.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Modal functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Toggle functionality
+        function toggleOpacity() {
+            const element = document.querySelector('.opacity-toggle');
+            element.classList.toggle('hidden');
+        }
+
+        function toggleTransform() {
+            const element = document.querySelector('.transform-hide');
+            element.classList.toggle('hidden');
+        }
+
+        function toggleClip() {
+            const element = document.querySelector('.clip-hide');
+            element.classList.toggle('hidden');
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html> 

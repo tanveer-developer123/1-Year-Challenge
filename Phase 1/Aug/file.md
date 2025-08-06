@@ -14,8 +14,8 @@
 
 ### 📌 Week 1 (Aug 1–7): Core Review + Tailwind
 **Topics:**
-- HTML5 Semantics & Accessibility
-- CSS Flexbox, Grid, Positioning
+- HTML5 Semantics & Accessibility ✅
+- CSS Flexbox, Grid, Positioning  
 - Tailwind CSS Basics (utility classes, layout, spacing, colors)
 - Git & GitHub Basics
 

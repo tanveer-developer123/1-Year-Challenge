@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Core Concepts Complete Guide</title>
+    <link rel="stylesheet" href="Syntax.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1 class="main-title">CSS Core Concepts</h1>
+            <p class="subtitle">Master the fundamentals of CSS styling</p>
+        </header>
+
+        <!-- 1. CSS Syntax Section -->
+        <section class="concept-section">
+            <h2>1. CSS Syntax (Selectors, Properties, Values)</h2>
+            <div class="syntax-demo">
+                <div class="code-example">
+                    <div class="selector">h1</div>
+                    <div class="opening-brace">{</div>
+                    <div class="property">color: #2c3e50;</div>
+                    <div class="property">font-size: 2rem;</div>
+                    <div class="property">text-align: center;</div>
+                    <div class="closing-brace">}</div>
+                </div>
+                <div class="explanation">
+                    <h4>Syntax Components:</h4>
+                    <ul>
+                        <li><strong>Selector:</strong> Targets HTML elements (h1, .class, #id)</li>
+                        <li><strong>Property:</strong> What to style (color, font-size, etc.)</li>
+                        <li><strong>Value:</strong> How to style it (#2c3e50, 2rem, center)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Box Model Section -->
+        <section class="concept-section">
+            <h2>2. Box Model (Content, Padding, Border, Margin)</h2>
+            <div class="box-model-demo">
+                <div class="box-model-container">
+                    <div class="margin">
+                        <div class="border">
+                            <div class="padding">
+                                <div class="content">
+                                    Content
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-model-code">
+                    <h4>Box Model Properties:</h4>
+                    <div class="code-block">
+                        <code>
+.content {<br>
+&nbsp;&nbsp;width: 200px;<br>
+&nbsp;&nbsp;height: 100px;<br>
+&nbsp;&nbsp;padding: 20px;<br>
+&nbsp;&nbsp;border: 3px solid #e74c3c;<br>
+&nbsp;&nbsp;margin: 30px;<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Units Section -->
+        <section class="concept-section">
+            <h2>3. CSS Units (px, %, em, rem, vh, vw)</h2>
+            <div class="units-demo">
+                <div class="unit-example">
+                    <h4>Pixel (px) - Fixed Size</h4>
+                    <div class="unit-box px-unit">20px</div>
+                    <p>Fixed size, doesn't scale with parent</p>
+                </div>
+                <div class="unit-example">
+                    <h4>Percentage (%) - Relative to Parent</h4>
+                    <div class="unit-box percent-unit">50%</div>
+                    <p>50% of parent width</p>
+                </div>
+                <div class="unit-example">
+                    <h4>Em (em) - Relative to Font Size</h4>
+                    <div class="unit-box em-unit">2em</div>
+                    <p>2x current font size</p>
+                </div>
+                <div class="unit-example">
+                    <h4>Rem (rem) - Relative to Root Font</h4>
+                    <div class="unit-box rem-unit">1.5rem</div>
+                    <p>1.5x root font size</p>
+                </div>
+                <div class="unit-example">
+                    <h4>Viewport Height (vh)</h4>
+                    <div class="unit-box vh-unit">10vh</div>
+                    <p>10% of viewport height</p>
+                </div>
+                <div class="unit-example">
+                    <h4>Viewport Width (vw)</h4>
+                    <div class="unit-box vw-unit">15vw</div>
+                    <p>15% of viewport width</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Colors Section -->
+        <section class="concept-section">
+            <h2>4. CSS Colors (HEX, RGB, HSL)</h2>
+            <div class="colors-demo">
+                <div class="color-example">
+                    <h4>HEX Colors</h4>
+                    <div class="color-box hex-color">#3498db</div>
+                    <p>6-digit hexadecimal</p>
+                </div>
+                <div class="color-example">
+                    <h4>RGB Colors</h4>
+                    <div class="color-box rgb-color">rgb(231, 76, 60)</div>
+                    <p>Red, Green, Blue values</p>
+                </div>
+                <div class="color-example">
+                    <h4>RGBA Colors</h4>
+                    <div class="color-box rgba-color">rgba(46, 204, 113, 0.8)</div>
+                    <p>RGB with transparency</p>
+                </div>
+                <div class="color-example">
+                    <h4>HSL Colors</h4>
+                    <div class="color-box hsl-color">hsl(210, 100%, 50%)</div>
+                    <p>Hue, Saturation, Lightness</p>
+                </div>
+                <div class="color-example">
+                    <h4>Named Colors</h4>
+                    <div class="color-box named-color">coral</div>
+                    <p>Predefined color names</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Specificity & Inheritance Section -->
+        <section class="concept-section">
+            <h2>5. Specificity & Inheritance</h2>
+            <div class="specificity-demo">
+                <div class="specificity-example">
+                    <h4>Specificity Hierarchy:</h4>
+                    <div class="specificity-levels">
+                        <div class="level">
+                            <span class="level-number">1</span>
+                            <span class="level-desc">Inline styles (style="")</span>
+                        </div>
+                        <div class="level">
+                            <span class="level-number">2</span>
+                            <span class="level-desc">ID selectors (#id)</span>
+                        </div>
+                        <div class="level">
+                            <span class="level-number">3</span>
+                            <span class="level-desc">Class selectors (.class)</span>
+                        </div>
+                        <div class="level">
+                            <span class="level-number">4</span>
+                            <span class="level-desc">Element selectors (p, h1)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="inheritance-example">
+                    <h4>Inheritance Demo:</h4>
+                    <div class="inheritance-demo">
+                        <div class="parent">
+                            Parent (color: blue)
+                            <div class="child">
+                                Child inherits color
+                                <div class="grandchild">
+                                    Grandchild also inherits
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Shorthand Properties Section -->
+        <section class="concept-section">
+            <h2>6. Shorthand Properties</h2>
+            <div class="shorthand-demo">
+                <div class="shorthand-example">
+                    <h4>Margin Shorthand</h4>
+                    <div class="code-comparison">
+                        <div class="long-form">
+                            <h5>Long Form:</h5>
+                            <code>
+margin-top: 10px;<br>
+margin-right: 20px;<br>
+margin-bottom: 10px;<br>
+margin-left: 20px;
+                            </code>
+                        </div>
+                        <div class="short-form">
+                            <h5>Shorthand:</h5>
+                            <code>margin: 10px 20px;</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="shorthand-example">
+                    <h4>Background Shorthand</h4>
+                    <div class="code-comparison">
+                        <div class="long-form">
+                            <h5>Long Form:</h5>
+                            <code>
+background-color: #3498db;<br>
+background-image: url('image.jpg');<br>
+background-repeat: no-repeat;<br>
+background-position: center;
+                            </code>
+                        </div>
+                        <div class="short-form">
+                            <h5>Shorthand:</h5>
+                            <code>background: #3498db url('image.jpg') no-repeat center;</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="shorthand-example">
+                    <h4>Border Shorthand</h4>
+                    <div class="code-comparison">
+                        <div class="long-form">
+                            <h5>Long Form:</h5>
+                            <code>
+border-width: 2px;<br>
+border-style: solid;<br>
+border-color: #e74c3c;
+                            </code>
+                        </div>
+                        <div class="short-form">
+                            <h5>Shorthand:</h5>
+                            <code>border: 2px solid #e74c3c;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>🎯 You've now mastered all CSS Core Concepts!</p>
+            <p>Practice these concepts to become a CSS expert.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

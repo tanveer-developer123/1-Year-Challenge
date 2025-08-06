@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Complete Guide</title>
+    <link rel="stylesheet" href="Position.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1 class="main-title">CSS Positioning Mastery</h1>
+            <p class="subtitle">Master element positioning and layering with powerful CSS properties</p>
+        </header>
+
+        <!-- 1. Position Types Section -->
+        <section class="concept-section">
+            <h2>1. Position Types (static, relative, absolute, fixed, sticky)</h2>
+            <div class="position-demo">
+                <div class="position-group">
+                    <h4>Static (Default)</h4>
+                    <div class="demo-container static-demo">
+                        <div class="position-item static">Static</div>
+                        <div class="position-item static">Static</div>
+                        <div class="position-item static">Static</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.position-item {<br>
+&nbsp;&nbsp;position: static;<br>
+&nbsp;&nbsp;/* Default positioning */<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="position-group">
+                    <h4>Relative</h4>
+                    <div class="demo-container relative-demo">
+                        <div class="position-item relative">Relative</div>
+                        <div class="position-item relative offset">Offset</div>
+                        <div class="position-item relative">Relative</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.relative {<br>
+&nbsp;&nbsp;position: relative;<br>
+&nbsp;&nbsp;top: 20px;<br>
+&nbsp;&nbsp;left: 20px;<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="position-group">
+                    <h4>Absolute</h4>
+                    <div class="demo-container absolute-demo">
+                        <div class="position-item">Normal</div>
+                        <div class="position-item absolute top-left">Top Left</div>
+                        <div class="position-item absolute top-right">Top Right</div>
+                        <div class="position-item absolute bottom-left">Bottom Left</div>
+                        <div class="position-item absolute bottom-right">Bottom Right</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.absolute {<br>
+&nbsp;&nbsp;position: absolute;<br>
+&nbsp;&nbsp;top: 0;<br>
+&nbsp;&nbsp;left: 0;<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="position-group">
+                    <h4>Fixed</h4>
+                    <div class="demo-container fixed-demo">
+                        <div class="position-item">Content</div>
+                        <div class="position-item fixed-top">Fixed Top</div>
+                        <div class="position-item fixed-bottom">Fixed Bottom</div>
+                        <div class="position-item fixed-center">Fixed Center</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.fixed-top {<br>
+&nbsp;&nbsp;position: fixed;<br>
+&nbsp;&nbsp;top: 0;<br>
+&nbsp;&nbsp;left: 0;<br>
+&nbsp;&nbsp;right: 0;<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="position-group">
+                    <h4>Sticky</h4>
+                    <div class="demo-container sticky-demo">
+                        <div class="position-item">Before Sticky</div>
+                        <div class="position-item sticky">Sticky Element</div>
+                        <div class="position-item">After Sticky</div>
+                        <div class="position-item">Scroll Content</div>
+                        <div class="position-item">More Content</div>
+                        <div class="position-item">Even More</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.sticky {<br>
+&nbsp;&nbsp;position: sticky;<br>
+&nbsp;&nbsp;top: 0;<br>
+&nbsp;&nbsp;z-index: 100;<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Z-index Layering Section -->
+        <section class="concept-section">
+            <h2>2. Z-index Layering and Stacking Context</h2>
+            <div class="zindex-demo">
+                <div class="zindex-group">
+                    <h4>Z-index Stacking</h4>
+                    <div class="stacking-container">
+                        <div class="layer base-layer">Base Layer (z-index: 1)</div>
+                        <div class="layer middle-layer">Middle Layer (z-index: 5)</div>
+                        <div class="layer top-layer">Top Layer (z-index: 10)</div>
+                        <div class="layer highest-layer">Highest Layer (z-index: 15)</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.base-layer { z-index: 1; }<br>
+.middle-layer { z-index: 5; }<br>
+.top-layer { z-index: 10; }<br>
+.highest-layer { z-index: 15; }
+                        </code>
+                    </div>
+                </div>
+
+                <div class="zindex-group">
+                    <h4>Stacking Context</h4>
+                    <div class="context-demo">
+                        <div class="context-parent">
+                            <div class="context-child low">Child 1 (z-index: 1)</div>
+                            <div class="context-child high">Child 2 (z-index: 10)</div>
+                        </div>
+                        <div class="context-sibling">Sibling (z-index: 5)</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.context-parent {<br>
+&nbsp;&nbsp;position: relative;<br>
+&nbsp;&nbsp;z-index: 1;<br>
+}<br>
+.context-child {<br>
+&nbsp;&nbsp;position: absolute;<br>
+&nbsp;&nbsp;z-index: 10;<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Position Properties Section -->
+        <section class="concept-section">
+            <h2>3. Position using top/right/bottom/left</h2>
+            <div class="position-props-demo">
+                <div class="props-group">
+                    <h4>Top Positioning</h4>
+                    <div class="position-examples">
+                        <div class="position-example">
+                            <h5>top: 0</h5>
+                            <div class="demo-box top-zero">
+                                <div class="positioned-item">Top 0</div>
+                            </div>
+                        </div>
+                        <div class="position-example">
+                            <h5>top: 50%</h5>
+                            <div class="demo-box top-fifty">
+                                <div class="positioned-item">Top 50%</div>
+                            </div>
+                        </div>
+                        <div class="position-example">
+                            <h5>top: 100%</h5>
+                            <div class="demo-box top-hundred">
+                                <div class="positioned-item">Top 100%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="props-group">
+                    <h4>Right Positioning</h4>
+                    <div class="position-examples">
+                        <div class="position-example">
+                            <h5>right: 0</h5>
+                            <div class="demo-box right-zero">
+                                <div class="positioned-item">Right 0</div>
+                            </div>
+                        </div>
+                        <div class="position-example">
+                            <h5>right: 20px</h5>
+                            <div class="demo-box right-twenty">
+                                <div class="positioned-item">Right 20px</div>
+                            </div>
+                        </div>
+                        <div class="position-example">
+                            <h5>right: 50%</h5>
+                            <div class="demo-box right-fifty">
+                                <div class="positioned-item">Right 50%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="props-group">
+                    <h4>Bottom & Left Positioning</h4>
+                    <div class="position-examples">
+                        <div class="position-example">
+                            <h5>bottom: 0, left: 0</h5>
+                            <div class="demo-box bottom-left">
+                                <div class="positioned-item">Bottom Left</div>
+                            </div>
+                        </div>
+                        <div class="position-example">
+                            <h5>bottom: 0, right: 0</h5>
+                            <div class="demo-box bottom-right">
+                                <div class="positioned-item">Bottom Right</div>
+                            </div>
+                        </div>
+                        <div class="position-example">
+                            <h5>center positioning</h5>
+                            <div class="demo-box center-pos">
+                                <div class="positioned-item">Centered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Scroll Effects Section -->
+        <section class="concept-section">
+            <h2>4. Scroll Effects with Sticky/Fixed</h2>
+            <div class="scroll-demo">
+                <div class="scroll-group">
+                    <h4>Sticky Navigation</h4>
+                    <div class="sticky-nav-demo">
+                        <div class="sticky-nav">
+                            <div class="nav-item">Home</div>
+                            <div class="nav-item">About</div>
+                            <div class="nav-item">Services</div>
+                            <div class="nav-item">Contact</div>
+                        </div>
+                        <div class="scroll-content">
+                            <div class="content-section">Section 1</div>
+                            <div class="content-section">Section 2</div>
+                            <div class="content-section">Section 3</div>
+                            <div class="content-section">Section 4</div>
+                            <div class="content-section">Section 5</div>
+                            <div class="content-section">Section 6</div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.sticky-nav {<br>
+&nbsp;&nbsp;position: sticky;<br>
+&nbsp;&nbsp;top: 0;<br>
+&nbsp;&nbsp;z-index: 100;<br>
+&nbsp;&nbsp;background: white;<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="scroll-group">
+                    <h4>Fixed Elements</h4>
+                    <div class="fixed-elements-demo">
+                        <div class="fixed-sidebar">
+                            <div class="sidebar-item">Sidebar Item 1</div>
+                            <div class="sidebar-item">Sidebar Item 2</div>
+                            <div class="sidebar-item">Sidebar Item 3</div>
+                        </div>
+                        <div class="fixed-fab">+</div>
+                        <div class="main-content">
+                            <div class="content-block">Main Content Area</div>
+                            <div class="content-block">Scroll to see fixed elements</div>
+                            <div class="content-block">Fixed sidebar stays in place</div>
+                            <div class="content-block">Floating action button too</div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.fixed-sidebar {<br>
+&nbsp;&nbsp;position: fixed;<br>
+&nbsp;&nbsp;top: 0;<br>
+&nbsp;&nbsp;left: 0;<br>
+&nbsp;&nbsp;height: 100vh;<br>
+}<br><br>
+.fixed-fab {<br>
+&nbsp;&nbsp;position: fixed;<br>
+&nbsp;&nbsp;bottom: 20px;<br>
+&nbsp;&nbsp;right: 20px;<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Advanced Positioning -->
+        <section class="concept-section">
+            <h2>5. Advanced Positioning Techniques</h2>
+            <div class="advanced-demo">
+                <div class="advanced-group">
+                    <h4>Centering Techniques</h4>
+                    <div class="centering-examples">
+                        <div class="centering-example">
+                            <h5>Absolute + Transform</h5>
+                            <div class="demo-box center-absolute">
+                                <div class="centered-item">Centered</div>
+                            </div>
+                        </div>
+                        <div class="centering-example">
+                            <h5>Flexbox Centering</h5>
+                            <div class="demo-box center-flex">
+                                <div class="centered-item">Centered</div>
+                            </div>
+                        </div>
+                        <div class="centering-example">
+                            <h5>Grid Centering</h5>
+                            <div class="demo-box center-grid">
+                                <div class="centered-item">Centered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advanced-group">
+                    <h4>Overlay Effects</h4>
+                    <div class="overlay-examples">
+                        <div class="overlay-example">
+                            <h5>Image Overlay</h5>
+                            <div class="image-container">
+                                <div class="image-placeholder">Image</div>
+                                <div class="overlay">Overlay Text</div>
+                            </div>
+                        </div>
+                        <div class="overlay-example">
+                            <h5>Modal Overlay</h5>
+                            <div class="modal-container">
+                                <div class="modal-backdrop">Backdrop</div>
+                                <div class="modal-content">Modal Content</div>
+                            </div>
+                        </div>
+                        <div class="overlay-example">
+                            <h5>Tooltip</h5>
+                            <div class="tooltip-container">
+                                <div class="tooltip-trigger">Hover Me</div>
+                                <div class="tooltip">Tooltip Text</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

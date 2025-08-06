@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Complete Guide</title>
+    <link rel="stylesheet" href="Responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1 class="main-title">Responsive Design Mastery</h1>
+            <p class="subtitle">Create beautiful, adaptive layouts for all devices</p>
+        </header>
+
+        <!-- 1. Media Queries and Breakpoints Section -->
+        <section class="concept-section">
+            <h2>1. Media Queries and Breakpoints</h2>
+            <div class="breakpoints-demo">
+                <div class="breakpoint-group">
+                    <h4>Common Breakpoints</h4>
+                    <div class="breakpoint-examples">
+                        <div class="breakpoint-example">
+                            <h5>Mobile First (320px+)</h5>
+                            <div class="responsive-box mobile-first">
+                                <div class="device-indicator">📱 Mobile</div>
+                                <div class="content-area">Mobile-first approach</div>
+                            </div>
+                        </div>
+                        <div class="breakpoint-example">
+                            <h5>Tablet (768px+)</h5>
+                            <div class="responsive-box tablet">
+                                <div class="device-indicator">📱 Tablet</div>
+                                <div class="content-area">Tablet layout</div>
+                            </div>
+                        </div>
+                        <div class="breakpoint-example">
+                            <h5>Desktop (1024px+)</h5>
+                            <div class="responsive-box desktop">
+                                <div class="device-indicator">💻 Desktop</div>
+                                <div class="content-area">Desktop layout</div>
+                            </div>
+                        </div>
+                        <div class="breakpoint-example">
+                            <h5>Large Desktop (1200px+)</h5>
+                            <div class="responsive-box large-desktop">
+                                <div class="device-indicator">🖥️ Large Desktop</div>
+                                <div class="content-area">Large desktop layout</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+/* Mobile First Approach */<br>
+.container {<br>
+&nbsp;&nbsp;width: 100%;<br>
+&nbsp;&nbsp;padding: 20px;<br>
+}<br><br>
+/* Tablet */<br>
+@media (min-width: 768px) {<br>
+&nbsp;&nbsp;.container {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;max-width: 750px;<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+/* Desktop */<br>
+@media (min-width: 1024px) {<br>
+&nbsp;&nbsp;.container {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;max-width: 970px;<br>
+&nbsp;&nbsp;}<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="breakpoint-group">
+                    <h4>Orientation & Feature Queries</h4>
+                    <div class="feature-examples">
+                        <div class="feature-example">
+                            <h5>Portrait vs Landscape</h5>
+                            <div class="orientation-demo">
+                                <div class="orientation-box portrait">📱 Portrait</div>
+                                <div class="orientation-box landscape">📱 Landscape</div>
+                            </div>
+                        </div>
+                        <div class="feature-example">
+                            <h5>Hover Support</h5>
+                            <div class="hover-demo">
+                                <div class="hover-element">Hover me!</div>
+                            </div>
+                        </div>
+                        <div class="feature-example">
+                            <h5>Dark Mode</h5>
+                            <div class="dark-mode-demo">
+                                <div class="theme-box light">☀️ Light Mode</div>
+                                <div class="theme-box dark">🌙 Dark Mode</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+/* Orientation */<br>
+@media (orientation: portrait) {<br>
+&nbsp;&nbsp;.layout { flex-direction: column; }<br>
+}<br><br>
+/* Hover Support */<br>
+@media (hover: hover) {<br>
+&nbsp;&nbsp;.button:hover { transform: scale(1.1); }<br>
+}<br><br>
+/* Dark Mode */<br>
+@media (prefers-color-scheme: dark) {<br>
+&nbsp;&nbsp;body { background: #1a1a1a; color: white; }<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Mobile-First Design Section -->
+        <section class="concept-section">
+            <h2>2. Mobile-First Design Approach</h2>
+            <div class="mobile-first-demo">
+                <div class="mobile-group">
+                    <h4>Mobile-First Layout</h4>
+                    <div class="layout-examples">
+                        <div class="layout-example">
+                            <h5>Mobile Layout</h5>
+                            <div class="mobile-layout">
+                                <div class="header-mobile">Header</div>
+                                <div class="nav-mobile">Navigation</div>
+                                <div class="main-mobile">Main Content</div>
+                                <div class="sidebar-mobile">Sidebar</div>
+                                <div class="footer-mobile">Footer</div>
+                            </div>
+                        </div>
+                        <div class="layout-example">
+                            <h5>Desktop Layout</h5>
+                            <div class="desktop-layout">
+                                <div class="header-desktop">Header</div>
+                                <div class="nav-desktop">Navigation</div>
+                                <div class="main-desktop">Main Content</div>
+                                <div class="sidebar-desktop">Sidebar</div>
+                                <div class="footer-desktop">Footer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+/* Mobile First - Base Styles */<br>
+.layout {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;flex-direction: column;<br>
+&nbsp;&nbsp;gap: 10px;<br>
+}<br><br>
+/* Desktop - Enhanced Styles */<br>
+@media (min-width: 768px) {<br>
+&nbsp;&nbsp;.layout {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;flex-direction: row;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;flex-wrap: wrap;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;.main { flex: 2; }<br>
+&nbsp;&nbsp;.sidebar { flex: 1; }<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="mobile-group">
+                    <h4>Progressive Enhancement</h4>
+                    <div class="enhancement-examples">
+                        <div class="enhancement-example">
+                            <h5>Basic → Enhanced</h5>
+                            <div class="progressive-demo">
+                                <div class="basic-feature">Basic Feature</div>
+                                <div class="enhanced-feature">Enhanced Feature</div>
+                            </div>
+                        </div>
+                        <div class="enhancement-example">
+                            <h5>Touch vs Mouse</h5>
+                            <div class="interaction-demo">
+                                <div class="touch-element">Touch Target</div>
+                                <div class="mouse-element">Mouse Element</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Fluid Layouts Section -->
+        <section class="concept-section">
+            <h2>3. Fluid Layouts using % and vw</h2>
+            <div class="fluid-demo">
+                <div class="fluid-group">
+                    <h4>Percentage-Based Layouts</h4>
+                    <div class="percentage-examples">
+                        <div class="percentage-example">
+                            <h5>50% Width</h5>
+                            <div class="fluid-container">
+                                <div class="fluid-item half-width">50% Width</div>
+                                <div class="fluid-item half-width">50% Width</div>
+                            </div>
+                        </div>
+                        <div class="percentage-example">
+                            <h5>33.33% Width</h5>
+                            <div class="fluid-container">
+                                <div class="fluid-item third-width">33.33%</div>
+                                <div class="fluid-item third-width">33.33%</div>
+                                <div class="fluid-item third-width">33.33%</div>
+                            </div>
+                        </div>
+                        <div class="percentage-example">
+                            <h5>Mixed Percentages</h5>
+                            <div class="fluid-container">
+                                <div class="fluid-item quarter-width">25%</div>
+                                <div class="fluid-item half-width">50%</div>
+                                <div class="fluid-item quarter-width">25%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fluid-group">
+                    <h4>Viewport Units (vw/vh)</h4>
+                    <div class="viewport-examples">
+                        <div class="viewport-example">
+                            <h5>Viewport Width (vw)</h5>
+                            <div class="viewport-demo">
+                                <div class="vw-element small">25vw</div>
+                                <div class="vw-element medium">50vw</div>
+                                <div class="vw-element large">75vw</div>
+                            </div>
+                        </div>
+                        <div class="viewport-example">
+                            <h5>Viewport Height (vh)</h5>
+                            <div class="vh-demo">
+                                <div class="vh-element">50vh Height</div>
+                            </div>
+                        </div>
+                        <div class="viewport-example">
+                            <h5>Responsive Text</h5>
+                            <div class="responsive-text-demo">
+                                <div class="text-small">Small Text (2vw)</div>
+                                <div class="text-medium">Medium Text (4vw)</div>
+                                <div class="text-large">Large Text (6vw)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Responsive Typography Section -->
+        <section class="concept-section">
+            <h2>4. Responsive Typography with clamp(), min(), max()</h2>
+            <div class="typography-demo">
+                <div class="typography-group">
+                    <h4>clamp() Function</h4>
+                    <div class="clamp-examples">
+                        <div class="clamp-example">
+                            <h5>Responsive Font Size</h5>
+                            <div class="clamp-demo">
+                                <div class="clamp-text small">Small clamp(1rem, 2vw, 1.5rem)</div>
+                                <div class="clamp-text medium">Medium clamp(1.5rem, 3vw, 2.5rem)</div>
+                                <div class="clamp-text large">Large clamp(2rem, 4vw, 3.5rem)</div>
+                            </div>
+                        </div>
+                        <div class="clamp-example">
+                            <h5>Responsive Spacing</h5>
+                            <div class="spacing-demo">
+                                <div class="spacing-item">Padding: clamp(1rem, 5vw, 3rem)</div>
+                                <div class="spacing-item">Margin: clamp(0.5rem, 2vw, 2rem)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+/* Responsive Typography */<br>
+.responsive-text {<br>
+&nbsp;&nbsp;font-size: clamp(1rem, 2vw, 2rem);<br>
+&nbsp;&nbsp;line-height: clamp(1.2, 1.5vw, 1.8);<br>
+&nbsp;&nbsp;padding: clamp(1rem, 5vw, 3rem);<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="typography-group">
+                    <h4>min() and max() Functions</h4>
+                    <div class="minmax-examples">
+                        <div class="minmax-example">
+                            <h5>min() Function</h5>
+                            <div class="min-demo">
+                                <div class="min-element">Width: min(300px, 50%)</div>
+                                <div class="min-element">Width: min(200px, 30%)</div>
+                            </div>
+                        </div>
+                        <div class="minmax-example">
+                            <h5>max() Function</h5>
+                            <div class="max-demo">
+                                <div class="max-element">Width: max(200px, 20%)</div>
+                                <div class="max-element">Width: max(150px, 15%)</div>
+                            </div>
+                        </div>
+                        <div class="minmax-example">
+                            <h5>Combined min() and max()</h5>
+                            <div class="combined-demo">
+                                <div class="combined-element">min(max(200px, 20%), 400px)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+/* min() and max() Functions */<br>
+.min-width {<br>
+&nbsp;&nbsp;width: min(300px, 50%);<br>
+}<br><br>
+.max-width {<br>
+&nbsp;&nbsp;width: max(200px, 20%);<br>
+}<br><br>
+.combined {<br>
+&nbsp;&nbsp;width: min(max(200px, 20%), 400px);<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Advanced Responsive Techniques -->
+        <section class="concept-section">
+            <h2>5. Advanced Responsive Techniques</h2>
+            <div class="advanced-demo">
+                <div class="advanced-group">
+                    <h4>CSS Grid Responsive</h4>
+                    <div class="grid-responsive-examples">
+                        <div class="grid-example">
+                            <h5>Auto-fit Grid</h5>
+                            <div class="auto-fit-grid">
+                                <div class="grid-item">Item 1</div>
+                                <div class="grid-item">Item 2</div>
+                                <div class="grid-item">Item 3</div>
+                                <div class="grid-item">Item 4</div>
+                                <div class="grid-item">Item 5</div>
+                                <div class="grid-item">Item 6</div>
+                            </div>
+                        </div>
+                        <div class="grid-example">
+                            <h5>Responsive Columns</h5>
+                            <div class="responsive-columns">
+                                <div class="column-item">Column 1</div>
+                                <div class="column-item">Column 2</div>
+                                <div class="column-item">Column 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advanced-group">
+                    <h4>Responsive Images</h4>
+                    <div class="image-examples">
+                        <div class="image-example">
+                            <h5>Picture Element</h5>
+                            <div class="picture-demo">
+                                <div class="image-placeholder">📷 Responsive Image</div>
+                                <div class="image-info">Different sizes for different screens</div>
+                            </div>
+                        </div>
+                        <div class="image-example">
+                            <h5>Object-fit</h5>
+                            <div class="object-fit-demo">
+                                <div class="object-fit-image">Cover</div>
+                                <div class="object-fit-image contain">Contain</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Performance & Best Practices -->
+        <section class="concept-section">
+            <h2>6. Performance & Best Practices</h2>
+            <div class="performance-demo">
+                <div class="performance-group">
+                    <h4>Performance Tips</h4>
+                    <div class="performance-tips">
+                        <div class="tip-item">
+                            <h5>🚀 Use CSS Containment</h5>
+                            <div class="tip-content">
+                                <code>contain: layout style paint;</code>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <h5>⚡ Optimize Media Queries</h5>
+                            <div class="tip-content">
+                                <code>@media (min-width: 768px) and (max-width: 1024px)</code>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <h5>🎯 Logical Properties</h5>
+                            <div class="tip-content">
+                                <code>margin-inline: auto; padding-block: 1rem;</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="performance-group">
+                    <h4>Accessibility in Responsive Design</h4>
+                    <div class="accessibility-examples">
+                        <div class="accessibility-example">
+                            <h5>Touch Targets</h5>
+                            <div class="touch-targets">
+                                <button class="touch-button">44px min</button>
+                                <button class="touch-button">Touch Friendly</button>
+                            </div>
+                        </div>
+                        <div class="accessibility-example">
+                            <h5>Focus Management</h5>
+                            <div class="focus-demo">
+                                <button class="focus-button">Focusable</button>
+                                <button class="focus-button">Button</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Complete Guide</title>
+    <link rel="stylesheet" href="Grid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1 class="main-title">CSS Grid Mastery</h1>
+            <p class="subtitle">Master two-dimensional layout with powerful grid properties</p>
+        </header>
+
+        <!-- 1. Two-dimensional Layout Section -->
+        <section class="concept-section">
+            <h2>1. Two-dimensional Layout (Rows & Columns)</h2>
+            <div class="layout-demo">
+                <div class="demo-container">
+                    <h4>Basic Grid Layout</h4>
+                    <div class="grid-container basic-grid">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.grid-container {<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;grid-template-columns: 1fr 1fr 1fr;<br>
+&nbsp;&nbsp;grid-template-rows: 100px 100px;<br>
+&nbsp;&nbsp;gap: 10px;<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="demo-container">
+                    <h4>Responsive Grid</h4>
+                    <div class="grid-container responsive-grid">
+                        <div class="grid-item">A</div>
+                        <div class="grid-item">B</div>
+                        <div class="grid-item">C</div>
+                        <div class="grid-item">D</div>
+                        <div class="grid-item">E</div>
+                        <div class="grid-item">F</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.grid-container {<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));<br>
+&nbsp;&nbsp;gap: 15px;<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Grid Tracks, Gaps, Template-areas Section -->
+        <section class="concept-section">
+            <h2>2. Grid Tracks, Gaps, Template-areas</h2>
+            <div class="tracks-demo">
+                <div class="tracks-group">
+                    <h4>Grid Tracks (Rows & Columns)</h4>
+                    <div class="tracks-examples">
+                        <div class="tracks-example">
+                            <h5>Fixed Tracks</h5>
+                            <div class="grid-container fixed-tracks">
+                                <div class="grid-item">Fixed</div>
+                                <div class="grid-item">200px</div>
+                                <div class="grid-item">150px</div>
+                                <div class="grid-item">100px</div>
+                            </div>
+                        </div>
+                        <div class="tracks-example">
+                            <h5>Flexible Tracks</h5>
+                            <div class="grid-container flexible-tracks">
+                                <div class="grid-item">1fr</div>
+                                <div class="grid-item">2fr</div>
+                                <div class="grid-item">1fr</div>
+                                <div class="grid-item">Auto</div>
+                            </div>
+                        </div>
+                        <div class="tracks-example">
+                            <h5>Mixed Tracks</h5>
+                            <div class="grid-container mixed-tracks">
+                                <div class="grid-item">200px</div>
+                                <div class="grid-item">1fr</div>
+                                <div class="grid-item">Auto</div>
+                                <div class="grid-item">2fr</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="template-areas-group">
+                    <h4>Template Areas</h4>
+                    <div class="template-areas-example">
+                        <div class="grid-container template-areas">
+                            <div class="grid-item header">Header</div>
+                            <div class="grid-item sidebar">Sidebar</div>
+                            <div class="grid-item main">Main Content</div>
+                            <div class="grid-item footer">Footer</div>
+                        </div>
+                        <div class="code-block">
+                            <code>
+.grid-container {<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;grid-template-areas:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"header header header"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"sidebar main main"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"footer footer footer";<br>
+&nbsp;&nbsp;grid-template-columns: 1fr 2fr 1fr;<br>
+&nbsp;&nbsp;grid-template-rows: 80px 200px 80px;<br>
+}<br><br>
+.header { grid-area: header; }<br>
+.sidebar { grid-area: sidebar; }<br>
+.main { grid-area: main; }<br>
+.footer { grid-area: footer; }
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Line-based Placement Section -->
+        <section class="concept-section">
+            <h2>3. Line-based Placement</h2>
+            <div class="placement-demo">
+                <div class="placement-group">
+                    <h4>Grid Lines & Placement</h4>
+                    <div class="placement-examples">
+                        <div class="placement-example">
+                            <h5>Line Numbers</h5>
+                            <div class="grid-container line-numbers">
+                                <div class="grid-item span-2">Span 2 cols</div>
+                                <div class="grid-item span-2-rows">Span 2 rows</div>
+                                <div class="grid-item">Normal</div>
+                                <div class="grid-item">Normal</div>
+                                <div class="grid-item span-both">Span both</div>
+                            </div>
+                        </div>
+                        <div class="placement-example">
+                            <h5>Named Lines</h5>
+                            <div class="grid-container named-lines">
+                                <div class="grid-item start-end">Start to End</div>
+                                <div class="grid-item">Normal</div>
+                                <div class="grid-item">Normal</div>
+                                <div class="grid-item">Normal</div>
+                            </div>
+                        </div>
+                        <div class="placement-example">
+                            <h5>Grid Areas</h5>
+                            <div class="grid-container grid-areas">
+                                <div class="grid-item area-a">Area A</div>
+                                <div class="grid-item area-b">Area B</div>
+                                <div class="grid-item area-c">Area C</div>
+                                <div class="grid-item area-d">Area D</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Auto-fit, Auto-fill, Repeat() Section -->
+        <section class="concept-section">
+            <h2>4. Auto-fit, Auto-fill, Repeat()</h2>
+            <div class="auto-demo">
+                <div class="auto-group">
+                    <h4>Repeat() Function</h4>
+                    <div class="repeat-examples">
+                        <div class="repeat-example">
+                            <h5>repeat(3, 1fr)</h5>
+                            <div class="grid-container repeat-3">
+                                <div class="grid-item">1fr</div>
+                                <div class="grid-item">1fr</div>
+                                <div class="grid-item">1fr</div>
+                            </div>
+                        </div>
+                        <div class="repeat-example">
+                            <h5>repeat(4, 100px)</h5>
+                            <div class="grid-container repeat-4">
+                                <div class="grid-item">100px</div>
+                                <div class="grid-item">100px</div>
+                                <div class="grid-item">100px</div>
+                                <div class="grid-item">100px</div>
+                            </div>
+                        </div>
+                        <div class="repeat-example">
+                            <h5>repeat(2, 1fr 2fr)</h5>
+                            <div class="grid-container repeat-mixed">
+                                <div class="grid-item">1fr</div>
+                                <div class="grid-item">2fr</div>
+                                <div class="grid-item">1fr</div>
+                                <div class="grid-item">2fr</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auto-group">
+                    <h4>Auto-fit vs Auto-fill</h4>
+                    <div class="auto-examples">
+                        <div class="auto-example">
+                            <h5>auto-fit</h5>
+                            <div class="grid-container auto-fit">
+                                <div class="grid-item">Item 1</div>
+                                <div class="grid-item">Item 2</div>
+                                <div class="grid-item">Item 3</div>
+                                <div class="grid-item">Item 4</div>
+                            </div>
+                        </div>
+                        <div class="auto-example">
+                            <h5>auto-fill</h5>
+                            <div class="grid-container auto-fill">
+                                <div class="grid-item">Item 1</div>
+                                <div class="grid-item">Item 2</div>
+                                <div class="grid-item">Item 3</div>
+                                <div class="grid-item">Item 4</div>
+                            </div>
+                        </div>
+                        <div class="auto-example">
+                            <h5>minmax() with auto</h5>
+                            <div class="grid-container minmax-auto">
+                                <div class="grid-item">Min 150px</div>
+                                <div class="grid-item">Max 1fr</div>
+                                <div class="grid-item">Flexible</div>
+                                <div class="grid-item">Auto</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Grid Nesting and Subgrid Section -->
+        <section class="concept-section">
+            <h2>5. Grid Nesting and Subgrid</h2>
+            <div class="nesting-demo">
+                <div class="nesting-group">
+                    <h4>Grid Nesting</h4>
+                    <div class="nesting-examples">
+                        <div class="nesting-example">
+                            <h5>Nested Grid Container</h5>
+                            <div class="grid-container parent-grid">
+                                <div class="grid-item">Parent 1</div>
+                                <div class="grid-item nested-grid">
+                                    <div class="nested-item">Child A</div>
+                                    <div class="nested-item">Child B</div>
+                                    <div class="nested-item">Child C</div>
+                                </div>
+                                <div class="grid-item">Parent 3</div>
+                                <div class="grid-item">Parent 4</div>
+                            </div>
+                        </div>
+                        <div class="nesting-example">
+                            <h5>Grid within Grid</h5>
+                            <div class="grid-container complex-nesting">
+                                <div class="grid-item">Main 1</div>
+                                <div class="grid-item sub-grid">
+                                    <div class="sub-item">Sub 1</div>
+                                    <div class="sub-item">Sub 2</div>
+                                    <div class="sub-item">Sub 3</div>
+                                    <div class="sub-item">Sub 4</div>
+                                </div>
+                                <div class="grid-item">Main 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subgrid-group">
+                    <h4>Subgrid (Modern CSS)</h4>
+                    <div class="subgrid-example">
+                        <div class="grid-container subgrid-demo">
+                            <div class="grid-item subgrid-parent">
+                                <div class="subgrid-child">Subgrid Item 1</div>
+                                <div class="subgrid-child">Subgrid Item 2</div>
+                                <div class="subgrid-child">Subgrid Item 3</div>
+                            </div>
+                            <div class="grid-item">Regular Item</div>
+                            <div class="grid-item">Regular Item</div>
+                        </div>
+                        <div class="code-block">
+                            <code>
+.subgrid-parent {<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;grid-template-columns: subgrid;<br>
+&nbsp;&nbsp;grid-column: 1 / -1;<br>
+}<br><br>
+.subgrid-child {<br>
+&nbsp;&nbsp;grid-column: span 1;<br>
+}
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Advanced Grid Features -->
+        <section class="concept-section">
+            <h2>6. Advanced Grid Features</h2>
+            <div class="advanced-demo">
+                <div class="advanced-group">
+                    <h4>Grid Alignment</h4>
+                    <div class="alignment-examples">
+                        <div class="alignment-example">
+                            <h5>justify-items: center</h5>
+                            <div class="grid-container justify-center">
+                                <div class="grid-item">Centered</div>
+                                <div class="grid-item">Centered</div>
+                                <div class="grid-item">Centered</div>
+                            </div>
+                        </div>
+                        <div class="alignment-example">
+                            <h5>align-items: stretch</h5>
+                            <div class="grid-container align-stretch">
+                                <div class="grid-item">Stretched</div>
+                                <div class="grid-item">Stretched</div>
+                                <div class="grid-item">Stretched</div>
+                            </div>
+                        </div>
+                        <div class="alignment-example">
+                            <h5>place-items: center</h5>
+                            <div class="grid-container place-center">
+                                <div class="grid-item">Placed</div>
+                                <div class="grid-item">Placed</div>
+                                <div class="grid-item">Placed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advanced-group">
+                    <h4>Grid Gaps & Spacing</h4>
+                    <div class="gap-examples">
+                        <div class="gap-example">
+                            <h5>Row Gap: 20px</h5>
+                            <div class="grid-container row-gap">
+                                <div class="grid-item">Row 1</div>
+                                <div class="grid-item">Row 1</div>
+                                <div class="grid-item">Row 2</div>
+                                <div class="grid-item">Row 2</div>
+                            </div>
+                        </div>
+                        <div class="gap-example">
+                            <h5>Column Gap: 30px</h5>
+                            <div class="grid-container column-gap">
+                                <div class="grid-item">Col 1</div>
+                                <div class="grid-item">Col 2</div>
+                                <div class="grid-item">Col 1</div>
+                                <div class="grid-item">Col 2</div>
+                            </div>
+                        </div>
+                        <div class="gap-example">
+                            <h5>Mixed Gaps</h5>
+                            <div class="grid-container mixed-gaps">
+                                <div class="grid-item">Mixed</div>
+                                <div class="grid-item">Mixed</div>
+                                <div class="grid-item">Mixed</div>
+                                <div class="grid-item">Mixed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

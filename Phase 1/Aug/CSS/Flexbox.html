@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Complete Guide</title>
+    <link rel="stylesheet" href="Flexbox.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1 class="main-title">CSS Flexbox Mastery</h1>
+            <p class="subtitle">Master one-dimensional layout with powerful flexbox properties</p>
+        </header>
+
+        <!-- 1. One-dimensional Layout Section -->
+        <section class="concept-section">
+            <h2>1. One-dimensional Layout (Row/Column)</h2>
+            <div class="layout-demo">
+                <div class="demo-container">
+                    <h4>Row Direction (Default)</h4>
+                    <div class="flex-container row-demo">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.flex-container {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;flex-direction: row;<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <div class="demo-container">
+                    <h4>Column Direction</h4>
+                    <div class="flex-container column-demo">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.flex-container {<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;flex-direction: column;<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Main Axis vs Cross Axis Section -->
+        <section class="concept-section">
+            <h2>2. Main Axis vs Cross Axis</h2>
+            <div class="axis-demo">
+                <div class="axis-explanation">
+                    <h4>Understanding Axes:</h4>
+                    <ul>
+                        <li><strong>Main Axis:</strong> Direction of flex-direction (row = horizontal, column =
+                            vertical)</li>
+                        <li><strong>Cross Axis:</strong> Perpendicular to main axis</li>
+                        <li><strong>Row Direction:</strong> Main axis = horizontal, Cross axis = vertical</li>
+                        <li><strong>Column Direction:</strong> Main axis = vertical, Cross axis = horizontal</li>
+                    </ul>
+                </div>
+                <div class="axis-visual">
+                    <div class="axis-container row-axis">
+                        <div class="main-axis">Main Axis (Row)</div>
+                        <div class="cross-axis">Cross Axis</div>
+                        <div class="flex-items">
+                            <div class="flex-item">1</div>
+                            <div class="flex-item">2</div>
+                            <div class="flex-item">3</div>
+                        </div>
+                    </div>
+                    <div class="axis-container column-axis">
+                        <div class="main-axis">Main Axis (Column)</div>
+                        <div class="cross-axis">Cross Axis</div>
+                        <div class="flex-items">
+                            <div class="flex-item">1</div>
+                            <div class="flex-item">2</div>
+                            <div class="flex-item">3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Alignment Section -->
+        <section class="concept-section">
+            <h2>3. Alignment: justify-content & align-items</h2>
+            <div class="alignment-demo">
+                <div class="alignment-group">
+                    <h4>justify-content (Main Axis Alignment)</h4>
+                    <div class="justify-examples">
+                        <div class="justify-example">
+                            <h5>flex-start</h5>
+                            <div class="flex-container justify-start">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                        <div class="justify-example">
+                            <h5>center</h5>
+                            <div class="flex-container justify-center">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                        <div class="justify-example">
+                            <h5>flex-end</h5>
+                            <div class="flex-container justify-end">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                        <div class="justify-example">
+                            <h5>space-between</h5>
+                            <div class="flex-container justify-between">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                        <div class="justify-example">
+                            <h5>space-around</h5>
+                            <div class="flex-container justify-around">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                        <div class="justify-example">
+                            <h5>space-evenly</h5>
+                            <div class="flex-container justify-evenly">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alignment-group">
+                    <h4>align-items (Cross Axis Alignment)</h4>
+                    <div class="align-examples">
+                        <div class="align-example">
+                            <h5>stretch (default)</h5>
+                            <div class="flex-container align-stretch">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item tall">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                        <div class="align-example">
+                            <h5>flex-start</h5>
+                            <div class="flex-container align-start">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item tall">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                        <div class="align-example">
+                            <h5>center</h5>
+                            <div class="flex-container align-center">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item tall">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                        <div class="align-example">
+                            <h5>flex-end</h5>
+                            <div class="flex-container align-end">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item tall">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Flex Properties Section -->
+        <section class="concept-section">
+            <h2>4. Flex-grow, Flex-shrink, Flex-basis</h2>
+            <div class="flex-properties-demo">
+                <div class="property-group">
+                    <h4>flex-grow (Growth Factor)</h4>
+                    <div class="grow-examples">
+                        <div class="grow-example">
+                            <h5>Equal Growth (1, 1, 1)</h5>
+                            <div class="flex-container grow-equal">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                        <div class="grow-example">
+                            <h5>Different Growth (1, 2, 1)</h5>
+                            <div class="flex-container grow-different">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                        <div class="grow-example">
+                            <h5>No Growth (0, 0, 0)</h5>
+                            <div class="flex-container grow-none">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-group">
+                    <h4>flex-shrink (Shrink Factor)</h4>
+                    <div class="shrink-examples">
+                        <div class="shrink-example">
+                            <h5>Equal Shrink (1, 1, 1)</h5>
+                            <div class="flex-container shrink-equal">
+                                <div class="flex-item wide">Wide Item 1</div>
+                                <div class="flex-item wide">Wide Item 2</div>
+                                <div class="flex-item wide">Wide Item 3</div>
+                            </div>
+                        </div>
+                        <div class="shrink-example">
+                            <h5>Different Shrink (1, 2, 1)</h5>
+                            <div class="flex-container shrink-different">
+                                <div class="flex-item wide">Wide Item 1</div>
+                                <div class="flex-item wide">Wide Item 2</div>
+                                <div class="flex-item wide">Wide Item 3</div>
+                            </div>
+                        </div>
+                        <div class="shrink-example">
+                            <h5>No Shrink (0, 0, 0)</h5>
+                            <div class="flex-container shrink-none">
+                                <div class="flex-item wide">Wide Item 1</div>
+                                <div class="flex-item wide">Wide Item 2</div>
+                                <div class="flex-item wide">Wide Item 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-group">
+                    <h4>flex-basis (Initial Size)</h4>
+                    <div class="basis-examples">
+                        <div class="basis-example">
+                            <h5>Auto Basis</h5>
+                            <div class="flex-container basis-auto">
+                                <div class="flex-item">Auto</div>
+                                <div class="flex-item">Auto</div>
+                                <div class="flex-item">Auto</div>
+                            </div>
+                        </div>
+                        <div class="basis-example">
+                            <h5>Fixed Basis (200px)</h5>
+                            <div class="flex-container basis-fixed">
+                                <div class="flex-item">200px</div>
+                                <div class="flex-item">200px</div>
+                                <div class="flex-item">200px</div>
+                            </div>
+                        </div>
+                        <div class="basis-example">
+                            <h5>Percentage Basis (25%)</h5>
+                            <div class="flex-container basis-percent">
+                                <div class="flex-item">25%</div>
+                                <div class="flex-item">25%</div>
+                                <div class="flex-item">25%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Flex-wrap and Gap Section -->
+        <section class="concept-section">
+            <h2>5. Flex-wrap and Gap</h2>
+            <div class="wrap-gap-demo">
+                <div class="wrap-group">
+                    <h4>flex-wrap</h4>
+                    <div class="wrap-examples">
+                        <div class="wrap-example">
+                            <h5>nowrap (default)</h5>
+                            <div class="flex-container wrap-nowrap">
+                                <div class="flex-item">Item 1</div>
+                                <div class="flex-item">Item 2</div>
+                                <div class="flex-item">Item 3</div>
+                                <div class="flex-item">Item 4</div>
+                                <div class="flex-item">Item 5</div>
+                                <div class="flex-item">Item 6</div>
+                            </div>
+                        </div>
+                        <div class="wrap-example">
+                            <h5>wrap</h5>
+                            <div class="flex-container wrap-wrap">
+                                <div class="flex-item">Item 1</div>
+                                <div class="flex-item">Item 2</div>
+                                <div class="flex-item">Item 3</div>
+                                <div class="flex-item">Item 4</div>
+                                <div class="flex-item">Item 5</div>
+                                <div class="flex-item">Item 6</div>
+                            </div>
+                        </div>
+                        <div class="wrap-example">
+                            <h5>wrap-reverse</h5>
+                            <div class="flex-container wrap-reverse">
+                                <div class="flex-item">Item 1</div>
+                                <div class="flex-item">Item 2</div>
+                                <div class="flex-item">Item 3</div>
+                                <div class="flex-item">Item 4</div>
+                                <div class="flex-item">Item 5</div>
+                                <div class="flex-item">Item 6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gap-group">
+                    <h4>gap (Spacing Between Items)</h4>
+                    <div class="gap-examples">
+                        <div class="gap-example">
+                            <h5>No Gap</h5>
+                            <div class="flex-container gap-none">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                                <div class="flex-item">4</div>
+                            </div>
+                        </div>
+                        <div class="gap-example">
+                            <h5>Small Gap (10px)</h5>
+                            <div class="flex-container gap-small">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                                <div class="flex-item">4</div>
+                            </div>
+                        </div>
+                        <div class="gap-example">
+                            <h5>Large Gap (30px)</h5>
+                            <div class="flex-container gap-large">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                                <div class="flex-item">4</div>
+                            </div>
+                        </div>
+                        <div class="gap-example">
+                            <h5>Row/Column Gap (20px/10px)</h5>
+                            <div class="flex-container gap-mixed">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                                <div class="flex-item">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
