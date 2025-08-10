@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styling States Without CSS Files</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Button with Hover and Focus States -->
+  <section class="my-10 text-center">
+    <h2 class="text-2xl font-semibold mb-6">Styled Button with Interaction States</h2>
+    <button class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 active:bg-blue-800 transition duration-300">
+      Hover, Focus, Active
+    </button>
+  </section>
+
+  <!-- Input Field with Focus and Disabled States -->
+  <section class="my-10 text-center">
+    <h2 class="text-2xl font-semibold mb-6">Input Field with Focus and Disabled States</h2>
+    <div class="mb-4">
+      <label for="inputField" class="block text-sm font-medium text-gray-700">Enter Your Name</label>
+      <input id="inputField" type="text" class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:text-gray-500" placeholder="Your Name">
+    </div>
+  </section>
+
+  <!-- Link with Hover and Focus States -->
+  <section class="my-10 text-center">
+    <h2 class="text-2xl font-semibold mb-6">Link with Hover and Focus States</h2>
+    <a href="#" class="text-blue-600 hover:text-green-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+      Visit Our Blog
+    </a>
+  </section>
+
+</body>
+</html>
