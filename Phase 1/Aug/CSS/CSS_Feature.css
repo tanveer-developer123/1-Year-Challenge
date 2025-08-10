@@ -1,0 +1,182 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #007bff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #636e72;
+    font-weight: 400;
+}
+
+.concept-section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-bottom: 32px;
+    padding: 24px 16px;
+}
+
+.concept-section h2 {
+    color: #0984e3;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.feature-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: flex-start;
+}
+
+.demo-container {
+    flex: 1 1 320px;
+    min-width: 280px;
+    margin-bottom: 16px;
+}
+
+.demo-container h4 {
+    font-size: 1.1rem;
+    color: #636e72;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.code-block {
+    background: #f1f2f6;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    color: #222;
+    border-left: 4px solid #0984e3;
+}
+
+.code-block code {
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    white-space: pre-line;
+    color: #636e72;
+}
+
+/* Responsive font size using clamp(), min(), max() */
+.responsive-text {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    color: #007bff;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Aspect Ratio */
+.aspect-demo {
+    aspect-ratio: 16 / 9;
+    background: #fdcb6e;
+    width: 60%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Container Query (requires parent to be a container) */
+.container-query-demo {
+    container-type: inline-size;
+    border: 2px dashed #636e72;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: #f9fafb;
+}
+.cq-box {
+    background: #00b894;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s;
+    text-align: center;
+}
+@container (min-width: 350px) {
+    .cq-box {
+        background: #0984e3;
+    }
+}
+
+/* CSS Nesting (modern syntax) */
+.nest-demo {
+    padding: 20px;
+    background: #ffeaa7;
+    border-radius: 8px;
+    text-align: center;
+    button {
+        background: #fd79a8;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+        &:hover {
+            background: #e17055;
+        }
+    }
+}
+
+/* Subgrid Demo */
+.grid-parent {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: #dfe6e9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    gap: 10px;
+}
+.grid-child {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-column: 1 / -1;
+    background: #b2bec3;
+    border-radius: 8px;
+    padding: 10px;
+    gap: 8px;
+}
+.grid-child > div {
+    background: #636e72;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+}

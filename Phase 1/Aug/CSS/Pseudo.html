@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements & Selectors Complete Guide</title>
+    <link rel="stylesheet" href="Pseudo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="main-title">Pseudo Elements & Selectors Mastery</h1>
+            <p class="subtitle">Advanced CSS tricks for content, interaction, and targeting</p>
+        </header>
+
+        <!-- 1. ::before & ::after Section -->
+        <section class="concept-section">
+            <h2>1. ::before & ::after (Content Injection)</h2>
+            <div class="pseudo-demo">
+                <span class="label">Item with ::before & ::after</span>
+                <div class="code-block">
+                    <code>
+.label::before {<br>
+&nbsp;&nbsp;content: "★ ";<br>
+&nbsp;&nbsp;color: #fd79a8;<br>
+}<br>
+.label::after {<br>
+&nbsp;&nbsp;content: " ✔";<br>
+&nbsp;&nbsp;color: #00b894;<br>
+}
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. :hover & :focus Section -->
+        <section class="concept-section">
+            <h2>2. :hover & :focus (Interaction)</h2>
+            <div class="pseudo-demo">
+                <button class="hover-btn">Hover or Focus Me</button>
+                <div class="code-block">
+                    <code>
+.hover-btn:hover,<br>
+.hover-btn:focus {<br>
+&nbsp;&nbsp;background: #00b894;<br>
+&nbsp;&nbsp;box-shadow: 0 0 12px #00b89466;<br>
+}
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Advanced Targeting Section -->
+        <section class="concept-section">
+            <h2>3. Advanced Targeting (:nth-child, :not(), :is(), :where())</h2>
+            <div class="pseudo-demo">
+                <ul class="advanced-list">
+                    <li>First</li>
+                    <li>Second</li>
+                    <li>Third</li>
+                    <li>Fourth</li>
+                    <li>Fifth</li>
+                </ul>
+                <div class="code-block">
+                    <code>
+.advanced-list li:nth-child(odd) {<br>
+&nbsp;&nbsp;background: #fdcb6e;<br>
+}<br>
+.advanced-list li:not(:first-child) {<br>
+&nbsp;&nbsp;border-left: 3px solid #0984e3;<br>
+}<br>
+.advanced-list :is(li:nth-child(2), li:nth-child(4)) {<br>
+&nbsp;&nbsp;background: #00b894;<br>
+}<br>
+.advanced-list :where(li:last-child) {<br>
+&nbsp;&nbsp;font-style: italic;<br>
+&nbsp;&nbsp;background: #fd79a8;<br>
+}
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Other Useful Pseudo Selectors Section -->
+        <section class="concept-section">
+            <h2>4. Other Useful Pseudo Selectors</h2>
+            <div class="pseudo-demo">
+                <ul class="advanced-list single-item-list">
+                    <li>Only One</li>
+                </ul>
+                <div class="empty-demo"></div>
+                <div class="code-block">
+                    <code>
+.single-item-list li:only-child {<br>
+&nbsp;&nbsp;background: #636e72;<br>
+}<br>
+.empty-demo:empty {<br>
+&nbsp;&nbsp;background: #fdcb6e;<br>
+&nbsp;&nbsp;border: 2px dashed #fd79a8;<br>
+}
+                    </code>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

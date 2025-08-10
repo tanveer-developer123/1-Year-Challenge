@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Variables.css">
+    <title>CSS Variables (:root) Example</title>
+    <style>
+        /* 1️⃣ Defining CSS Variables in :root */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+
+            /* Dark Theme Variables */
+            --dark-primary: #1abc9c;
+            --dark-secondary: #e67e22;
+            --dark-text: #f1f1f1;
+            --dark-bg: #222;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1 {
+            color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Dark theme class applied to body */
+        .dark-theme {
+            --primary-color: var(--dark-primary);
+            --secondary-color: var(--dark-secondary);
+            --text-color: var(--dark-text);
+            --bg-color: var(--dark-bg);
+        }
+
+        /* Code block styling */
+        .code-block {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Variables (:root) Demo</h1>
+    <p>This page demonstrates how to use <strong>CSS Variables</strong> with <code>:root</code> for easy theme control and reusability.</p>
+
+    <button onclick="toggleTheme()">Toggle Theme</button>
+
+    <div class="code-block">
+:root {  
+    --primary-color: #3498db;  
+    --secondary-color: #2ecc71;  
+    --text-color: #333;  
+    --bg-color: #f4f4f4;  
+
+    /* Dark Theme */  
+    --dark-primary: #1abc9c;  
+    --dark-secondary: #e67e22;  
+    --dark-text: #f1f1f1;  
+    --dark-bg: #222;  
+}
+    </div>
+
+    <h2>Why use CSS Variables?</h2>
+    <ul>
+        <li>✅ <strong>Reusability:</strong> Define a value once, use it everywhere with <code>var()</code>.</li>
+        <li>✅ <strong>Easy updates:</strong> Change one variable in <code>:root</code>, and it updates across the site.</li>
+        <li>✅ <strong>Themes:</strong> Quickly switch between light/dark mode by changing variable values.</li>
+        <li>✅ <strong>Maintainability:</strong> Cleaner and more organized code.</li>
+    </ul>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-theme");
+        }
+    </script>
+</body>
+</html>

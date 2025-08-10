@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All CSS Transitions & Animations Tricks</title>
+    <link rel="stylesheet" href="Transitions.css">
+</head>
+
+<body>
+    <h1>All CSS Transitions & Animations Tricks</h1>
+
+    <section>
+        <h2>Transition Button</h2>
+        <button class="transition-btn">Hover Me</button>
+    </section>
+
+    <section>
+        <h2>Animated Box (@keyframes)</h2>
+        <div class="animated-box">Bounce</div>
+    </section>
+
+    <section>
+        <h2>Transform Demo</h2>
+        <div class="transform-demo">Click or Hover</div>
+    </section>
+
+    <section>
+        <h2>Multiple Transitions</h2>
+        <div class="multi-transition">Hover Me</div>
+    </section>
+
+    <section>
+        <h2>Animation Timing & Delay</h2>
+        <div class="timing-demo">Timing & Delay</div>
+    </section>
+    <!-- Add inside <body> in Transitions.html -->
+    <section>
+        <h2>Active/Click Transition</h2>
+        <button class="transition-btn">Click Me</button>
+    </section>
+    <section>
+        <h2>Infinite Color Animation</h2>
+        <div class="color-animate">Colors</div>
+    </section>
+    <section>
+        <h2>Combined Animation & Transition</h2>
+        <div class="combined-demo">Pulse + Hover</div>
+    </section>
+    <script>
+        // Toggle transform on click
+        document.querySelector('.transform-demo').addEventListener('click', function () {
+            this.classList.toggle('transformed');
+        });
+    </script>
+</body>
+
+</html>

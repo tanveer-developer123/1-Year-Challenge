@@ -1,0 +1,64 @@
+/* 1️⃣ Defining CSS Variables in :root */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+
+    /* Dark Theme Variables */
+    --dark-primary: #1abc9c;
+    --dark-secondary: #e67e22;
+    --dark-text: #f1f1f1;
+    --dark-bg: #222;
+}
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Heading color */
+h1 {
+    color: var(--primary-color);
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 15px;
+}
+
+/* Button styles */
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Dark theme class applied to body */
+.dark-theme {
+    --primary-color: var(--dark-primary);
+    --secondary-color: var(--dark-secondary);
+    --text-color: var(--dark-text);
+    --bg-color: var(--dark-bg);
+}
+
+/* Code block styling */
+.code-block {
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre;
+    margin-top: 20px;
+}

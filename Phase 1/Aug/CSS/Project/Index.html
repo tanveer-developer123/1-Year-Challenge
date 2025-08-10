@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">MyLogo</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="card-grid">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+            <div class="card">Card 6</div>
+        </section>
+    </main>
+
+    <script>
+        // Theme Toggle Button
+        const themeToggle = document.getElementById("themeToggle");
+        const body = document.body;
+
+        themeToggle.addEventListener("click", () => {
+            body.classList.toggle("dark");
+            themeToggle.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 8px;
+}
+
+h2 {
+    color: #0984e3;
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.pseudo-demo {
+    margin-bottom: 32px;
+    padding: 18px 12px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Pseudo Elements: ::before & ::after */
+.label {
+    position: relative;
+    padding: 8px 24px;
+    background: #fdcb6e;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.label::before {
+    content: "★ ";
+    color: #fd79a8;
+    font-size: 1.2em;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.label::after {
+    content: " ✔";
+    color: #00b894;
+    font-size: 1.2em;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Pseudo Classes: :hover & :focus */
+.hover-btn {
+    padding: 10px 24px;
+    background: #0984e3;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.hover-btn:hover,
+.hover-btn:focus {
+    background: #00b894;
+    box-shadow: 0 0 12px #00b89466;
+    outline: none;
+}
+
+/* Advanced Selectors: List Demo */
+.advanced-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 12px;
+}
+.advanced-list li {
+    padding: 8px 16px;
+    background: #dfe6e9;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #636e72;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* :nth-child(odd) */
+.advanced-list li:nth-child(odd) {
+    background: #fdcb6e;
+    color: #222;
+}
+
+/* :not(:first-child) */
+.advanced-list li:not(:first-child) {
+    border-left: 3px solid #0984e3;
+}
+
+/* :is() selector */
+.advanced-list :is(li:nth-child(2), li:nth-child(4)) {
+    background: #00b894;
+    color: #fff;
+}
+
+/* :where() selector (no specificity) */
+.advanced-list :where(li:last-child) {
+    font-style: italic;
+    background: #fd79a8;
+    color: #fff;
+}
+
+/* :first-child & :last-child */
+.advanced-list li:first-child {
+    font-weight: bold;
+    border-right: 3px solid #fd79a8;
+}
+.advanced-list li:last-child {
+    text-decoration: underline;
+}
+
+/* :only-child */
+.single-item-list li:only-child {
+    background: #636e72;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+/* :empty */
+.empty-demo:empty {
+    background: #fdcb6e;
+    border: 2px dashed #fd79a8;
+    min-height: 30px;
+}
+
+/* ::selection */
+.advanced-list li::selection {
+    background: #0984e3;
+    color: #fff;
+}
+
+/* :has() selector (modern, not supported everywhere yet) */
+.advanced-list:has(li:last-child) {
+    box-shadow: 0 0 8px #fd79a8;
+}

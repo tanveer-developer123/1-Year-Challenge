@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CSS Features Complete Guide</title>
+    <link rel="stylesheet" href="CSS_Feature.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1 class="main-title">Modern CSS Features Mastery</h1>
+            <p class="subtitle">Explore the latest CSS features for responsive, powerful layouts</p>
+        </header>
+
+        <!-- 1. clamp(), min(), max() for Responsive Values -->
+        <section class="concept-section">
+            <h2>1. Responsive Values: clamp(), min(), max()</h2>
+            <div class="feature-demo">
+                <div class="demo-container">
+                    <h4>Responsive Font Size</h4>
+                    <p class="responsive-text">Resize the window to see font size change!</p>
+                    <div class="code-block">
+                        <code>
+.responsive-text {<br>
+&nbsp;&nbsp;font-size: clamp(1rem, 2vw, 2.5rem);<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. aspect-ratio -->
+        <section class="concept-section">
+            <h2>2. Aspect Ratio</h2>
+            <div class="feature-demo">
+                <div class="demo-container">
+                    <h4>Aspect Ratio 16:9</h4>
+                    <div class="aspect-demo">Aspect Ratio 16:9</div>
+                    <div class="code-block">
+                        <code>
+.aspect-demo {<br>
+&nbsp;&nbsp;aspect-ratio: 16 / 9;<br>
+&nbsp;&nbsp;width: 60%;<br>
+&nbsp;&nbsp;max-width: 400px;<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Container Queries -->
+        <section class="concept-section">
+            <h2>3. Container Queries</h2>
+            <div class="feature-demo">
+                <div class="demo-container">
+                    <h4>Container Query Demo</h4>
+                    <div class="container-query-demo">
+                        <div class="cq-box">
+                            <p>Resize the parent container to see color change!</p>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.container-query-demo {<br>
+&nbsp;&nbsp;container-type: inline-size;<br>
+}<br>
+.cq-box {<br>
+&nbsp;&nbsp;background: #00b894;<br>
+}<br>
+@container (min-width: 350px) {<br>
+&nbsp;&nbsp;.cq-box { background: #0984e3; }<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CSS Nesting -->
+        <section class="concept-section">
+            <h2>4. CSS Nesting</h2>
+            <div class="feature-demo">
+                <div class="demo-container">
+                    <h4>Modern CSS Nesting</h4>
+                    <div class="nest-demo">
+                        <button>Nested Button</button>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.nest-demo {<br>
+&nbsp;&nbsp;button {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;background: #fd79a8;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;transition: background 0.3s;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&amp;:hover {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: #e17055;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Subgrid -->
+        <section class="concept-section">
+            <h2>5. Subgrid</h2>
+            <div class="feature-demo">
+                <div class="demo-container">
+                    <h4>Subgrid Demo</h4>
+                    <div class="grid-parent">
+                        <div class="grid-child">
+                            <div>Subgrid Item 1</div>
+                            <div>Subgrid Item 2</div>
+                            <div>Subgrid Item 3</div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <code>
+.grid-parent {<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;grid-template-rows: auto 1fr;<br>
+}<br>
+.grid-child {<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;grid-template-columns: subgrid;<br>
+&nbsp;&nbsp;grid-template-rows: subgrid;<br>
+}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
