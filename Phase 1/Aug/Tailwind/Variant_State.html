@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Variants & State Separation Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <div class="max-w-xl mx-auto py-10 px-4">
+    <header class="mb-8 text-center">
+      <h1 class="text-3xl font-bold text-blue-600 mb-2">Variants & State Separation</h1>
+      <p class="text-gray-700">Visual interaction states are separated from base styling.<br>
+        Variants help handle user interactions cleanly.<br>
+        Keeps UI logic maintainable and scalable.</p>
+    </header>
+
+    <!-- Button Demo -->
+    <section class="mb-8 bg-white rounded-lg shadow p-6">
+      <h2 class="text-xl font-semibold mb-4">Interactive Button States</h2>
+      <button class="bg-blue-500 text-white font-semibold px-6 py-2 rounded transition
+        hover:bg-blue-700
+        focus:outline-none focus:ring-2 focus:ring-blue-300
+        active:bg-blue-800
+        disabled:bg-gray-400 disabled:cursor-not-allowed">
+        Hover, Focus, Active, Disabled
+      </button>
+      <button class="bg-blue-500 text-white font-semibold px-6 py-2 rounded ml-4" disabled>
+        Disabled State
+      </button>
+      <div class="mt-6 bg-gray-50 rounded p-4">
+        <strong>Tailwind Classes Explained:</strong>
+        <code>
+.bg-blue-500 <span style="color:#0984e3;">/* Base background color */</span><br>
+.text-white <span style="color:#0984e3;">/* Base text color */</span><br>
+.hover:bg-blue-700 <span style="color:#0984e3;">/* On hover, background darkens */</span><br>
+.focus:outline-none <span style="color:#0984e3;">/* Remove default outline on focus */</span><br>
+.focus:ring-2 .focus:ring-blue-300 <span style="color:#0984e3;">/* Add blue ring on focus */</span><br>
+.active:bg-blue-800 <span style="color:#0984e3;">/* On click, background is darkest */</span><br>
+.disabled:bg-gray-400 <span style="color:#0984e3;">/* Disabled state: gray background */</span><br>
+.disabled:cursor-not-allowed <span style="color:#0984e3;">/* Disabled state: not-allowed cursor */</span>
+        </code>
+        <br>
+        <strong>Why use variants?</strong>
+        <ul style="margin-top:8px;">
+          <li>Variants keep interaction logic separate from base styling.</li>
+          <li>Easy to maintain and scale UI components.</li>
+          <li>Consistent user experience for all states.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Card Demo -->
+    <section class="mb-8 bg-white rounded
