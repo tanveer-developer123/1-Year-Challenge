@@ -1,0 +1,7 @@
+Performance-Oriented Styling Approach
+• Minimizes unused CSS from the final build.
+• Keeps styles lightweight and fast-loading.
+• Built-in methods for eliminating redundant styles.
+
+
+ya mera topic asa ha ka is ko hum sirf html file ma use krta ha chota mota projetc ma use krta hai or hum na is ko React , Next.js , Vue.js , Angular wghara bara project ma is ka usecase nahi hota wo hmr i=i bulit in hoti hai is ma hu m simple html file ma hum dist/output.css ma jo hmri file chlti rhit hai is ko ya tailwind.config.js ma kam ati hai or is ma hum jitni likhta hia is hisab sa ya output.css ma kam hota rhta hia jis sa simple app fast & lightweight ho jati hia 

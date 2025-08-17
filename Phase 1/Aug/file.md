@@ -16,8 +16,8 @@
 **Topics:**
 - HTML5 Semantics & Accessibility ✅
 - CSS Flexbox, Grid, Positioning  ✅
-- Tailwind CSS Basics (utility classes, layout, spacing, colors)
-- Git & GitHub Basics
+- Tailwind CSS Basics (utility classes, layout, spacing, colors)   ✅
+- Git & GitHub Basics   ✅
 
 **Practice Tasks:**
 - Create a static landing page (HTML/CSS)

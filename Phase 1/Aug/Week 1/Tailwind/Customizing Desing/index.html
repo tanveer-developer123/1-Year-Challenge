@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS Full Demo</title>
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 text-white p-4 flex justify-between items-center shadow-lg">
+    <h1 class="text-2xl font-bold">Tailwind Demo</h1>
+    <ul class="flex space-x-6">
+      <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Docs</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <h2 class="text-4xl font-bold mb-4">Welcome to Tailwind CSS</h2>
+    <p class="text-lg max-w-2xl mx-auto">
+      A utility-first CSS framework that lets you build custom designs quickly.
+      This page covers most features of Tailwind including spacing, colors, typography, flexbox, grid, and more.
+    </p>
+    <button class="mt-6 px-6 py-3 bg-yellow-400 text-black rounded-lg shadow hover:scale-105 transform transition">
+      Get Started
+    </button>
+  </section>
+
+  <!-- Typography Examples -->
+  <section class="p-10">
+    <h2 class="text-3xl font-bold mb-4">Typography</h2>
+    <p class="mb-2">Default text with <strong>bold</strong>, <em>italic</em>, and <u>underline</u>.</p>
+    <p class="text-sm text-gray-600">Small text example.</p>
+    <p class="text-lg">Large text example.</p>
+    <p class="text-xl font-mono">Monospace example.</p>
+  </section>
+
+  <!-- Colors & Spacing -->
+  <section class="p-10 bg-gray-50">
+    <h2 class="text-3xl font-bold mb-6">Colors & Spacing</h2>
+    <div class="flex space-x-4">
+      <div class="w-24 h-24 bg-red-500"></div>
+      <div class="w-24 h-24 bg-green-500"></div>
+      <div class="w-24 h-24 bg-blue-500"></div>
+      <div class="w-24 h-24 bg-yellow-500"></div>
+    </div>
+  </section>
+
+  <!-- Flexbox -->
+  <section class="p-10">
+    <h2 class="text-3xl font-bold mb-6">Flexbox</h2>
+    <div class="flex justify-around bg-gray-200 p-6 rounded-lg">
+      <div class="bg-blue-500 text-white px-6 py-4 rounded">Item 1</div>
+      <div class="bg-green-500 text-white px-6 py-4 rounded">Item 2</div>
+      <div class="bg-purple-500 text-white px-6 py-4 rounded">Item 3</div>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section class="p-10 bg-gray-50">
+    <h2 class="text-3xl font-bold mb-6">Grid</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 shadow rounded">Grid Item 1</div>
+      <div class="bg-white p-6 shadow rounded">Grid Item 2</div>
+      <div class="bg-white p-6 shadow rounded">Grid Item 3</div>
+    </div>
+  </section>
+
+  <!-- Cards -->
+  <section class="p-10">
+    <h2 class="text-3xl font-bold mb-6">Cards</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-xl font-bold mb-2">Card Title</h3>
+        <p class="text-gray-600">This is a card example with Tailwind CSS.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-xl font-bold mb-2">Card Title</h3>
+        <p class="text-gray-600">Another example of a card.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-xl font-bold mb-2">Card Title</h3>
+        <p class="text-gray-600">Cards are reusable UI components.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Forms -->
+  <section class="p-10 bg-gray-50">
+    <h2 class="text-3xl font-bold mb-6">Forms</h2>
+    <form class="max-w-md mx-auto bg-white p-6 rounded shadow">
+      <label class="block mb-2 font-medium">Name</label>
+      <input type="text" class="w-full p-2 border rounded mb-4" placeholder="Enter your name">
+
+      <label class="block mb-2 font-medium">Email</label>
+      <input type="email" class="w-full p-2 border rounded mb-4" placeholder="Enter your email">
+
+      <label class="block mb-2 font-medium">Message</label>
+      <textarea class="w-full p-2 border rounded mb-4" placeholder="Type message..."></textarea>
+
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        Submit
+      </button>
+    </form>
+  </section>
+
+  <!-- Responsive Example -->
+  <section class="p-10">
+    <h2 class="text-3xl font-bold mb-6">Responsive Design</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-red-400 p-4 rounded text-white">1</div>
+      <div class="bg-green-400 p-4 rounded text-white">2</div>
+      <div class="bg-blue-400 p-4 rounded text-white">3</div>
+      <div class="bg-yellow-400 p-4 rounded text-white">4</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center p-4">
+    © 2025 Tailwind Demo. All rights reserved.
+  </footer>
+
+</body>
+</html>
