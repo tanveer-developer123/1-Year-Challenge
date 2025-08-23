@@ -19,7 +19,7 @@
 
 | Month   | Focus                                                                      | Tools/Topics           | Projects                          |
 | ------- | -------------------------------------------------------------------------- | ---------------------- | --------------------------------- |
-| *Aug* | HTML/CSS/JS Review + Tailwind CSS<br>DOM, Fetch, API                       | Tailwind, GSAP, AOS    | Responsive Portfolio, Weather App |
+| *Aug* | HTML/CSS/JS Review + Tailwind CSS ,DOM, Fetch, API                       | Tailwind, GSAP, AOS    | Responsive Portfolio, Weather App |
 | *Sep* | React Deep Dive:<br>Hooks, Forms, Routing, Context                         | React, Axios, Firebase | Blog UI, Todo App                 |
 | *Oct* | Advanced React Patterns<br>React + Tailwind Systems<br>Reusable Components | React, Formik, Yup     | Admin Dashboard UI                |
 

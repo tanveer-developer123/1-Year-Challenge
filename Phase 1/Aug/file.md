@@ -28,10 +28,9 @@
 
 ### 📌 Week 2 (Aug 8–14): JavaScript Review + DOM
 **Topics:**
-- JavaScript ES6+ (let, const, arrow functions, array methods)
-- DOM Selection, Events (click, input)
-- LocalStorage for persistent data
-- Responsive Design Principles
+- JavaScript ES6+ (let, const, arrow functions, array methods)   ✅
+- DOM Selection, Events (click, input)    ✅
+- LocalStorage for persistent data    ✅
 
 **Practice Tasks:**
 - Exercises: map, filter, reduce

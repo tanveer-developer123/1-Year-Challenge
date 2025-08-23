@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DOM Selection & Events Example</title>
+  </head>
+  <body style="font-family: Arial, sans-serif; padding: 20px;">
+
+    <h1 style="color: teal;">DOM Selection & Events (Click + Input)</h1>
+
+    <!-- ===== DOM Selection Targets ===== -->
+    <p id="para1" style="color: blue;">This is paragraph 1 (by ID)</p>
+    <p class="para2" style="color: green;">This is paragraph 2 (by Class)</p>
+    <p>This is paragraph 3 (by Tag)</p>
+
+    <ul style="padding: 10px; background: #f4f4f4;">
+      <li class="item">Apple</li>
+      <li class="item">Banana</li>
+      <li class="item">Orange</li>
+    </ul>
+
+    <img src="https://via.placeholder.com/150" id="demoImg" alt="Demo Image" style="display:block; margin:10px 0;" />
+
+    <!-- ===== Events Section ===== -->
+    <button id="clickBtn" style="padding:10px 20px; background: teal; color:white; border:none; cursor:pointer;">
+      Click Me
+    </button>
+
+    <input 
+      type="text" 
+      id="nameInput" 
+      placeholder="Type your name..." 
+      style="margin-top: 10px; padding:8px; border:1px solid #ccc; display:block;"
+    />
+
+    <h2 id="output" style="color: purple; margin-top: 10px;"></h2>
+
+    <script src="Selection.js"></script>
+  </body>
+</html>
