@@ -41,10 +41,10 @@
 
 ### 📌 Week 3 (Aug 15–21): Fetch API + Real APIs
 **Topics:**
-- Fetch API (GET, POST)
-- Error Handling (try/catch)
-- Async/Await
-- Real-world API practice
+- Fetch API (GET, POST)   ✅
+- Error Handling (try/catch)  ✅
+- Async/Await  ✅
+- Real-world API practice   ✅
 
 **Practice Tasks:**
 - Call dummy API (jsonplaceholder.typicode.com)
