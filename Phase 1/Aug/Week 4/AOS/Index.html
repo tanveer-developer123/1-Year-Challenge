@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOS 3D Example</title>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f2027;
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(24,123,205,0.9);
+      padding: 15px 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    /* Cards Section */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 50px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      text-align: center;
+      font-size: 18px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* Footer */
+    .footer {
+      background: rgba(0,0,0,0.85);
+      color: #ddd;
+      text-align: center;
+      padding: 30px;
+      margin-top: 50px;
+      border-top: 2px solid rgba(255,255,255,0.2);
+      box-shadow: 0 -8px 25px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar" data-aos="flip-down" data-aos-duration="2000">
+    <div>🚀 My Website</div>
+    <div>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="cards">
+    <div class="card" data-aos="flip-left" data-aos-duration="2000" data-aos-delay="200">
+      <h3>Card 1</h3>
+      <p>This card floats in from left.</p>
+    </div>
+    <div class="card" data-aos="flip-right" data-aos-duration="2000" data-aos-delay="600">
+      <h3>Card 2</h3>
+      <p>This card floats in from right.</p>
+    </div>
+    <div class="card" data-aos="flip-up" data-aos-duration="2000" data-aos-delay="1000">
+      <h3>Card 3</h3>
+      <p>This card floats up from below.</p>
+    </div>
+    <div class="card" data-aos="flip-down" data-aos-duration="2000" data-aos-delay="1400">
+      <h3>Card 4</h3>
+      <p>This card floats down from above.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer" data-aos="flip-up" data-aos-duration="2500" data-aos-delay="1800">
+    <p>© 2025 My Website | Built with ❤️</p>
+  </div>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,   // ek hi baar animate ho
+      offset: 120   // scroll kitna karna hai tab trigger ho
+    });
+  </script>
+</body>
+</html>

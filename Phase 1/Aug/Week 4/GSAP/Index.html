@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP 3D Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      perspective: 1500px; /* enable 3D depth */
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.7);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transform: translateY(-100px) rotateX(-90deg);
+      opacity: 0;
+    }
+
+    nav .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    nav ul li:hover {
+      transform: rotateY(15deg) scale(1.1);
+      color: #00ffcc;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin: 0;
+      opacity: 0;
+      transform: rotateX(-90deg);
+    }
+
+    .hero p {
+      font-size: 22px;
+      margin: 20px 0;
+      opacity: 0;
+      transform: translateZ(-200px);
+    }
+
+    .hero button {
+      padding: 15px 30px;
+      font-size: 20px;
+      background: #00ffcc;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      opacity: 0;
+      transform: rotateY(90deg);
+    }
+
+    /* Products */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 60px;
+    }
+
+    .card {
+      background: #1c1c1c;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      opacity: 0;
+      transform: rotateY(90deg);
+      transition: transform 0.4s;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .card:hover {
+      transform: rotateY(0) scale(1.05);
+    }
+
+    /* FAQ */
+    .faq {
+      padding: 40px;
+      background: #222;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: rotateX(-90deg);
+    }
+
+    .faq-item {
+      background: #333;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateZ(-300px);
+      transition: transform 0.3s;
+    }
+
+    .faq-item:hover {
+      transform: rotateX(10deg) scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      opacity: 0;
+      transform: rotateX(90deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">My3DBrand</div>
+    <ul>
+      <li>Home</li>
+      <li>Products</li>
+      <li>FAQ</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 id="hero-title">Experience 3D Web</h1>
+    <p id="hero-sub">With Pure GSAP Animations 🎉</p>
+    <button id="hero-btn">Explore Now</button>
+  </section>
+
+  <!-- Products -->
+  <section class="products">
+    <div class="card">
+      <img src="https://via.placeholder.com/250x150" alt="Product 1">
+      <h3>3D Product 1</h3>
+      <p>Amazing description here.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/250x150" alt="Product 2">
+      <h3>3D Product 2</h3>
+      <p>Awesome product you need.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/250x150" alt="Product 3">
+      <h3>3D Product 3</h3>
+      <p>Best one in the collection.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2 id="faq-title">FAQs</h2>
+    <div class="faq-item">👉 What is GSAP?</div>
+    <div class="faq-item">👉 Can GSAP do 3D?</div>
+    <div class="faq-item">👉 Is GSAP free?</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My3DBrand. All rights reserved.</p>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <script>
+    // Navbar animation
+    gsap.to("nav", { duration: 1, y: 0, rotateX: 0, opacity: 1, ease: "back.out(1.7)" });
+
+    // Hero animation
+    gsap.timeline()
+      .to("#hero-title", { duration: 1, opacity: 1, rotateX: 0, ease: "back.out(1.7)" })
+      .to("#hero-sub", { duration: 1, opacity: 1, z: 0, ease: "power2.out" }, "-=0.5")
+      .to("#hero-btn", { duration: 1, opacity: 1, rotateY: 0, ease: "elastic.out(1,0.5)" }, "-=0.5");
+
+    // Product cards animation
+    gsap.utils.toArray(".card").forEach((card, i) => {
+      gsap.to(card, {
+        duration: 1,
+        opacity: 1,
+        rotateY: 0,
+        delay: i * 0.3 + 1,
+        ease: "back.out(1.7)"
+      });
+    });
+
+    // FAQ animation
+    gsap.to("#faq-title", { duration: 1, opacity: 1, rotateX: 0, delay: 2 });
+    gsap.utils.toArray(".faq-item").forEach((item, i) => {
+      gsap.to(item, {
+        duration: 1,
+        opacity: 1,
+        z: 0,
+        delay: 2.5 + i * 0.3,
+        ease: "elastic.out(1, 0.5)"
+      });
+    });
+
+    // Footer animation
+    gsap.to("footer", { duration: 1, opacity: 1, rotateX: 0, delay: 4, ease: "back.out(1.7)" });
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zero Gravity Navbar & Footer</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(145deg, #1e90ff, #187bcd);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+      border-radius: 0 0 20px 20px;
+      perspective: 1000px;
+    }
+
+    .navbar a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      display: inline-block;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(145deg, #111, #000);
+      padding: 20px;
+      text-align: center;
+      box-shadow: inset 0 8px 25px rgba(0,0,0,0.6);
+      border-radius: 20px 20px 0 0;
+      perspective: 1000px;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 16px;
+      display: inline-block;
+    }
+
+    /* 3D floating effect base */
+    .floatable {
+      transition: transform 0.5s ease-out;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="floatable">🚀 My Website</div>
+    <div>
+      <a class="floatable" href="#">Home</a>
+      <a class="floatable" href="#">About</a>
+      <a class="floatable" href="#">Contact</a>
+    </div>
+  </div>
+
+  <div style="height:70vh; display:flex; align-items:center; justify-content:center;">
+    <h1 class="floatable">🌌 Welcome to Zero Gravity Mode</h1>
+  </div>
+
+  <div class="footer">
+    <p class="floatable">© 2025 My Website | Built with ❤️</p>
+  </div>
+
+  <script>
+    // GSAP hover animations
+    document.querySelectorAll(".floatable").forEach(el => {
+      el.addEventListener("mouseenter", () => {
+        gsap.to(el, {
+          duration: 1.2,
+          y: -20,                // float up
+          rotationX: 25,
+          rotationY: 15,
+          scale: 1.2,
+          ease: "elastic.out(1, 0.5)"
+        });
+      });
+
+      el.addEventListener("mouseleave", () => {
+        gsap.to(el, {
+          duration: 1,
+          y: 0,
+          rotationX: 0,
+          rotationY: 0,
+          scale: 1,
+          ease: "power3.out"
+        });
+      });
+    });
+  </script>
+</body>
+</html>

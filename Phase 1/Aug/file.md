@@ -55,10 +55,10 @@
 
 ### 📌 Week 4 (Aug 22–31): Animations + Final Projects
 **Topics:**
-- GSAP Basics (timeline, scrollTrigger)
-- AOS Integration (fade-up, zoom-in, etc.)
-- Finalize projects
-- Deploy & Polish UI
+- GSAP Basics (timeline, scrollTrigger) ✅
+- AOS Integration (fade-up, zoom-in, etc.) ✅
+- Finalize projects ✅
+- Deploy & Polish UI ✅
 
 **Projects to Complete:**
 - ✅ Responsive Portfolio Website  
