@@ -1,0 +1,94 @@
+ChatGPT said:
+
+React ko theek tarike se seekhne ke liye use step-by-step samajhna padta hai. Main tumhe ek structured list de raha hoon jo beginner se advanced tak jati hai:
+
+1. React Basics
+
+React kya hai, component-based architecture
+
+Functional vs Class components (ab mostly functional use hote hain)
+
+JSX (JavaScript + XML)
+
+Props aur State ka concept
+
+Event handling (onClick, onChange, etc.)
+
+2. Hooks
+
+useState, useEffect (sabse zyada use hote hain)
+
+useRef, useMemo, useCallback
+
+useReducer
+
+Custom hooks banana
+
+3. Forms and User Input
+
+Controlled vs uncontrolled components
+
+Form validation (manual aur libraries ke sath)
+
+4. React Router
+
+Single Page Application (SPA) ka concept
+
+React Router basics (Routes, Link, Navigate)
+
+Nested routes
+
+Protected routes (authentication ke liye)
+
+5. State Management
+
+Context API
+
+Redux (agar complex project ho)
+
+Zustand, Jotai (modern alternatives)
+
+6. Data Handling
+
+API calls (Fetch, Axios)
+
+Async/await, error handling
+
+Custom hooks for fetching data
+
+7. Performance Optimization
+
+Memoization (React.memo, useMemo, useCallback)
+
+Code splitting, lazy loading
+
+Virtualization (large lists ke liye)
+
+8. Firebase / Backend Integration
+
+Firebase Auth (Login/Signup)
+
+Firestore database
+
+CRUD operations
+
+Hosting
+
+9. Testing (optional but important)
+
+Jest, React Testing Library
+
+Component testing
+
+10. Advanced Concepts
+
+React Query / TanStack Query (data fetching and caching)
+
+Server-Side Rendering (Next.js)
+
+TypeScript with React
+
+Deployment (Vercel, Netlify)
+
+Is tarah tumhe ek clear roadmap mil jata hai.
+Kya tum chahte ho main inko beginner → intermediate → advanced roadmap ke format mein likh kar dikhau?w
