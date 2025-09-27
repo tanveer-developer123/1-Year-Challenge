@@ -1,0 +1,6 @@
+| Week       | Topics & Skills                                                                                                                          | Tools/Libraries              | Practice Projects           |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------- |
+| **Week 1** | Advanced React Patterns: <br>• Compound Components <br>• Render Props <br>• HOC                                                          | React                        | Small UI components demo    |
+| **Week 2** | React + Tailwind Systems: <br>• Utility Classes <br>• Responsive Layouts <br>• Dark/Light Mode                                           | React, TailwindCSS           | Responsive Dashboard Layout |
+| **Week 3** | Reusable Components: <br>• Buttons, Cards, Modals <br>• Tables, Lists <br>• Formik + Yup Forms                                           | React, Formik, Yup           | Form UI & Table components  |
+| **Project** | Full Project: **Admin Dashboard UI** <br>• Sidebar Navigation <br>• Dynamic Tables & Forms <br>• Form Validation <br>• Theme Integration | React, Tailwind, Formik, Yup | Admin Dashboard UI Project  |

@@ -1,4 +1,4 @@
-## ✅ *Tech Stack Overview (Learning Order)*
+## *Tech Stack Overview (Learning Order)*
 
 1. HTML, CSS, Tailwind, Bootstrap
 2. JavaScript Advanced
@@ -20,7 +20,7 @@
 | Month   | Focus                                                                      | Tools/Topics           | Projects                          |
 | ------- | -------------------------------------------------------------------------- | ---------------------- | --------------------------------- |
 | *Aug* | HTML/CSS/JS Review + Tailwind CSS ,DOM, Fetch, API                       | Tailwind, GSAP, AOS    | Responsive Portfolio, Weather App | ✅
-| *Sep* | React Deep Dive:<br>Hooks, Forms, Routing, Context                         | React, Axios, Firebase | Blog UI, Todo App                 |
+| *Sep* | React Deep Dive:<br>Hooks, Forms, Routing, Context                         | React, Axios, Firebase | Blog UI, Todo App                 |✅
 | *Oct* | Advanced React Patterns<br>React + Tailwind Systems<br>Reusable Components | React, Formik, Yup     | Admin Dashboard UI                |
 
 ---
@@ -57,11 +57,11 @@
 
 ## 🎯 Final Skills Gained:
 
-✅ React, Express, MongoDB (MERN Pro)
-✅ Next.js for SSR & SEO
-✅ Three.js for 3D Web Experiences
-✅ Angular for Enterprise-level frontend
-✅ GitHub Projects + Docker + Deployment
-✅ Freelance-ready Profile + Portfolio
+React, Express, MongoDB (MERN Pro) <br>
+Next.js for SSR & SEO <br>
+Three.js for 3D Web Experiences <br>
+Angular for Enterprise-level frontend <br>
+GitHub Projects + Docker + Deployment <br>
+Freelance-ready Profile + Portfolio <br>
 
 ---
