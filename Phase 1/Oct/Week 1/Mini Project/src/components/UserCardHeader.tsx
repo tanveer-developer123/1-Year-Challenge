@@ -1,10 +1,6 @@
+import { useContext } from "react";
 
-function UserCardHeader() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default UserCardHeader
+export const UserCardHeader = () => {
+  const user = useContext(UserContext);
+  return <h2>{user.name}</h2>;
+};

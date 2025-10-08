@@ -1,10 +1,10 @@
 
-function UserCardBody() {
-    return (
-        <>
-
-        </>
-    )
+const UserCardBody = () => {
+  return (
+    <div>
+      
+    </div>
+  )
 }
 
 export default UserCardBody
