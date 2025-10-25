@@ -1,0 +1,75 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper function to check if user is admin
+    function isAdmin() {
+      return isAuthenticated() && 
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'Admin'; 
+    }
+    
+    // Helper function to check if user is accessing their own document
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      // Anyone authenticated can read all user documents
+      allow read: if isAuthenticated();
+      
+      // Users can create their own document during signup
+      allow create: if isAuthenticated() && isOwner(userId);
+      
+      // Users can update their own document, or admins can update any
+      allow update: if isAuthenticated() && (isOwner(userId) || isAdmin());
+      
+      // Only admins can delete users
+      allow delete: if isAdmin();
+    }
+    
+    // Products collection
+    match /products/{productId} {
+      // Anyone authenticated can read products
+      allow read: if isAuthenticated();
+      
+      // Only admins can create, update, or delete products
+      allow create, update, delete: if isAdmin();
+    }
+    
+    // Admin logs collection (for tracking admin actions)
+    match /adminLogs/{logId} {
+      // Only admins can read logs
+      allow read: if isAdmin();
+      
+      // Only admins can create logs
+      allow create: if isAdmin();
+      
+      // No one can update or delete logs (immutable audit trail)
+      allow update, delete: if false;
+    }
+    
+    // User activity collection (for tracking user actions)
+    match /userActivity/{activityId} {
+      // Users can read their own activity, admins can read all
+      allow read: if isAuthenticated() && 
+                  (request.auth.uid == resource.data.userId || isAdmin());
+      
+      // Users can create their own activity logs
+      allow create: if isAuthenticated();
+      
+      // No one can update or delete activity logs
+      allow update, delete: if false;
+    }
+    
+    // Default deny all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
