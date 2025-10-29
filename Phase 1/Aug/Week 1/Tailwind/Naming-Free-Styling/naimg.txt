@@ -1,0 +1,8 @@
+Naming-Free Styling System
+• Removes dependency on class naming schemes like BEM.
+• Styling logic is embedded in descriptive utility combinations.
+• Improves readability by showing what each class does visually.
+
+
+
+is ma na hum is ko simply use krta hai or ya tailwind ma built-in classes hoti hai is ka hum use krta hai or jis sa hma bhut fiadda hota hai or is sa kisi bigner ko bara acha sa smjh a jata ka kiya kiya kr rha hai ya clas jaisa bg-gray-900
