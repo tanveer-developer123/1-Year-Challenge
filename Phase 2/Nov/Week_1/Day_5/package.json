@@ -1,0 +1,16 @@
+{
+  "name": "day_5",
+  "version": "1.0.0",
+  "description": "CRUD routes for tasks using Express",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
