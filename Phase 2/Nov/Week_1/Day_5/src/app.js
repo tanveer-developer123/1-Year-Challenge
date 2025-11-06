@@ -1,13 +1,13 @@
 import express from "express";
+import taskRoutes from "./routes/userRoutes.js";
 
 const app = express();
-const port = 4000;
+app.use(express.json()); 
 
+// Routes
+app.use("/api/tasks", taskRoutes);
 
-app.get('/', (req,res)=>{
-    res.send("CRUD Chck is a Home page and i make 4 routers 1. GET , 2. Update, 3. Del 4. POST");
+const PORT = 4000;
+app.listen(PORT, () => {
+  console.log(`✅ Server running on http://localhost:${PORT}`);
 });
-
-app.listen(port, ()=>{
-    console.log(`Server is running on localhost:${port}`)
-})
