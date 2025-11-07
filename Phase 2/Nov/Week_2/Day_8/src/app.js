@@ -1,16 +1,23 @@
 import express from "express";
+import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { connectDB } from "./config/db.js";
 
 dotenv.config();
+
 const app = express();
+const PORT = process.env.PORT || 5000;
 
-connectDB();
+// Connect MongoDB
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ MongoDB Connected Successfully!"))
+  .catch((err) => console.error("❌ MongoDB Connection Error:", err));
 
+// Routes
 app.get("/", (req, res) => {
-  res.send("MongoDB Connected - Day 8 Done");
+  res.send("MongoDB connection successful with Atlas 🚀");
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`🚀 Server running on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
